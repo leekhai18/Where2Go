@@ -16,7 +16,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Contacts
 
-Le Tuan Khai - 15520333@gm.uit.edu.vn
-Le Thi My Linh - 15520422@gm.uit.edu.vn
-Nguyen Tan Phat - 15520603@gm.uit.edu.vn
-Chau Van Sang - 15520717@gm.uit.edu.vn
+Le Tuan Khai - 15520333@gm.uit.edu.vn  
+Le Thi My Linh - 15520422@gm.uit.edu.vn   
+Nguyen Tan Phat - 15520603@gm.uit.edu.vn    
+Chau Van Sang - 15520717@gm.uit.edu.vn    
