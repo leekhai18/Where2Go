@@ -6,7 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './write-post.component.html',
 })
 export class WritePostComponent {
-
-  starRate = 2;
-  heartRate = 4;
 }

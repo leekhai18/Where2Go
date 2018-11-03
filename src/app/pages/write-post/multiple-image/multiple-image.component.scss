@@ -1,4 +1,4 @@
-@import '../../@theme/styles/themes';
+@import '../../../@theme/styles/themes';
 @import '~bootstrap/scss/mixins/breakpoints';
 @import '~@nebular/theme/styles/global/breakpoints';
 
@@ -8,7 +8,82 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  nb-card-body {
+    padding: 0;
+    position: relative;
+  }
+
+  ._kkr {
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: top;
+  }
+
+  ._m {
+    position: relative;
+  }
+
+  ._6a {
+    display: inline-block;
+  }
+
+  a {
+    color: #365899;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .__9t {
+    background-image: url(assets/images/addImage.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 20px;
+  }
   
+  .__9u {
+    border: 2px dashed #dddfe2;
+    border-radius: 2px;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 100px;
+    margin-right: 5px;
+    min-width: 100px;
+    position: relative;
+    width: auto;
+  }
+
+  ._m ._3jk {
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  ._m ._n {
+    bottom: 0;
+    cursor: inherit;
+    font-size: 1000px !important;
+    height: 300px;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+  }
+
+  ._5f0v {
+    outline: none;
+  }
+
+  input[type="file" i] {
+    align-items: baseline;
+    color: inherit;
+    text-align: start !important;
+  }
+
   .btn-header {
     padding-bottom: 5px;
     padding-top: 5px;
