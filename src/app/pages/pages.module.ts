@@ -17,7 +17,7 @@ const PAGES_COMPONENTS = [
     ThemeModule,
     ProfileModule,
     PlacesModule,
-    WritePostModule
+    WritePostModule,
   ],
   declarations: [
     ...PAGES_COMPONENTS,

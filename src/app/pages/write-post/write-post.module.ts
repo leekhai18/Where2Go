@@ -7,7 +7,7 @@ import { WritePostComponent } from './write-post.component';
     ThemeModule,
   ],
   declarations: [
-    WritePostComponent
+    WritePostComponent,
   ],
 })
 export class WritePostModule { }
