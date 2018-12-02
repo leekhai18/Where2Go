@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ElectricityService } from '../../../@core/data/electricity.service';
+import { MyPostsService } from '../../../@core/data/my-posts.service';
 
 @Component({
   selector: 'ngx-manage-post',
@@ -10,7 +10,7 @@ export class ManagePostComponent implements OnInit {
 
   data: Array<any>;
 
-  constructor(private eService: ElectricityService) {
+  constructor(private eService: MyPostsService) {
     this.data = this.eService.getData();
   }
 

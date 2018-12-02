@@ -2,7 +2,8 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { UserService } from './users.service';
-import { ElectricityService } from './electricity.service';
+import { MyPostsService } from './my-posts.service';
+import { PostsService } from './posts.service';
 import { StateService } from './state.service';
 import { SmartTableService } from './smart-table.service';
 import { PlayerService } from './player.service';
@@ -19,7 +20,8 @@ import { LayoutService } from './layout.service';
 
 const SERVICES = [
   UserService,
-  ElectricityService,
+  MyPostsService,
+  PostsService,
   StateService,
   SmartTableService,
   PlayerService,
