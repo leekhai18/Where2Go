@@ -1,0 +1,44 @@
+.avatar {
+  border-radius: 50% !important;
+  flex-shrink: 0;
+  background: #ffffff;
+  border: solid 2px #bcc3cc;
+  width: 70%;
+  position: relative;
+  display: block;
+  margin: auto;
+}
+
+.input-avatar {
+  top: 2%;
+  right: 10%;
+  min-height: 30%;
+  opacity: 0;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  display: block;
+}
+
+.btn-new-post {
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+
+.icon-edit {
+  font-size: 2rem;
+  position: relative;
+  left: 85%;
+  bottom: 38px;
+  cursor: pointer;
+
+  &:hover {
+    color: #40dc7e;
+  }
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
