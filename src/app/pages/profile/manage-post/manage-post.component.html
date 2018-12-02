@@ -5,15 +5,19 @@
     </div>
 
     <nb-tabset fullWidth>
-      <nb-tab *ngFor="let year of data" [tabTitle]="year.title" [active]="year.active">
-        <div class="stats-month" *ngFor="let month of year.months">
-          <div>
-            <span class="month">{{ month.month }}</span>
-            <span class="delta" [ngClass]="{ 'down': month.down }">{{ month.delta }}</span>
-          </div>
-          <div class="results">
-            <b>{{ month.kWatts }}</b> kWh / <b>{{ month.cost }}</b> USD
-          </div>
+      <nb-tab *ngFor="let tab of data" [tabTitle]="tab.title" [active]="tab.active">
+        <div>
+            <nb-list
+            nbInfiniteList
+            [threshold]="500"
+            (bottomThreshold)="loadNext(firstCard)">
+            <nb-list-item *ngFor="let newsPost of firstCard.news">
+              <ngx-post [post]="newsPost"></ngx-post>
+            </nb-list-item>
+            <nb-list-item *ngFor="let _ of firstCard.placeholders">
+              <ngx-post-placeholder></ngx-post-placeholder>
+            </nb-list-item>
+          </nb-list>
         </div>
       </nb-tab>
     </nb-tabset>
