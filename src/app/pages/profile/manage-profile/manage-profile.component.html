@@ -3,8 +3,11 @@
   <nb-card-body>
     <div>
       <img class="avatar" [src]="user?.picture" alt="Ảnh đại diện">
-      <input accept="image/*, image/heic, image/heif" multiple="" name="composer_photo" title="Chọn ảnh để tải lên"
-        display="inline-block" type="file" class="input-avatar">
+      <input  accept="image/*, image/heic, image/heif" 
+              multiple="" name="composer_photo" title="Chọn ảnh để tải lên"
+              display="inline-block" type="file" class="input-avatar"
+              #imageInput
+              (change)="processFile(imageInput)">
       <a class="avatar"></a>
     </div>
 

@@ -1,7 +1,9 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { UserService } from '../../../@core/data/users.service';
-import { DOCUMENT } from '@angular/common';
 
+class ImageSnippet {
+  constructor(public src: string, public file: File) { }
+}
 
 @Component({
   selector: 'ngx-manage-profile',
@@ -16,8 +18,9 @@ export class ManageProfileComponent implements OnInit {
   enableEditEmail = false;
   enableEditPhone = false;
 
-  constructor(private userService: UserService,
-              @Inject(DOCUMENT) document) { }
+  profileImage: ImageSnippet;
+
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
     this.userService.getUsers()
@@ -49,6 +52,18 @@ export class ManageProfileComponent implements OnInit {
     } else {
       this.enableEditPhone = true;
     }
+  }
+
+  processFile(imageInput: any) {
+    const file: File = imageInput.files[0];
+    const reader = new FileReader();
+
+    reader.addEventListener('load', (event: any) => {
+      this.profileImage = new ImageSnippet(event.target.result, file);
+      this.user.picture = this.profileImage.src;
+    });
+
+    reader.readAsDataURL(file);
   }
 
 }
