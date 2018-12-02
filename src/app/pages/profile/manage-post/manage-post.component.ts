@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MyPostsService } from '../../../@core/data/my-posts.service';
+import { PostsService } from './../../../@core/data/posts.service';
 
 @Component({
   selector: 'ngx-manage-post',
@@ -10,8 +11,9 @@ export class ManagePostComponent implements OnInit {
 
   data: Array<any>;
 
-  constructor(private eService: MyPostsService) {
-    this.data = this.eService.getData();
+  constructor(private myPostsService: MyPostsService) {
+    this.data = this.myPostsService.getData();
+    console.log(this.data);
   }
 
   ngOnInit() {
