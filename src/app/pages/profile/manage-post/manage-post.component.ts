@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MyPostsService } from '../../../@core/data/my-posts.service';
-import { PostsService } from './services/posts.service';
+
 
 @Component({
   selector: 'ngx-manage-post',
@@ -11,35 +11,32 @@ export class ManagePostComponent implements OnInit {
 
   data: Array<any>;
 
-  firstCard = {
-    news: [],
+  cards = [{
+    posts: [],
     placeholders: [],
     loading: false,
     pageToLoadNext: 1,
-  };
-  pageSize = 10;
+  }, {
+    posts: [],
+    placeholders: [],
+    loading: false,
+    pageToLoadNext: 1,
+  }, {
+    posts: [],
+    placeholders: [],
+    loading: false,
+    pageToLoadNext: 1,
+  }];
 
-  constructor(private myPostsService: MyPostsService,
-              private postsService: PostsService) {
-
-    this.data = this.myPostsService.getData();
+  constructor(private myPostsService: MyPostsService) {
+    this.data = this.myPostsService.getData;
   }
 
   ngOnInit() {
   }
 
-  loadNext(cardData) {
-    if (cardData.loading) { return; }
-
-    cardData.loading = true;
-    cardData.placeholders = new Array(this.pageSize);
-    this.postsService.load(cardData.pageToLoadNext, this.pageSize)
-      .subscribe(nextNews => {
-        cardData.placeholders = [];
-        cardData.news.push(...nextNews);
-        cardData.loading = false;
-        cardData.pageToLoadNext++;
-      });
+  loadNext(cardDatas, index) {
+    this.myPostsService.loadNext(cardDatas, index);
   }
 
 }

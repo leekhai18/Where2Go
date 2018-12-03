@@ -1,5 +1,5 @@
+import { Post } from './../../../../@core/data/posts.service';
 import { Component, OnInit, Input } from '@angular/core';
-import { NewsPost } from '../services/posts.service';
 
 @Component({
   selector: 'ngx-post',
@@ -8,7 +8,7 @@ import { NewsPost } from '../services/posts.service';
 })
 export class PostComponent implements OnInit {
 
-  @Input() post: NewsPost;
+  @Input() post: Post;
   
   constructor() { }
 

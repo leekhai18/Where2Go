@@ -8,13 +8,14 @@ import { ManagePostComponent } from './manage-post/manage-post.component';
 import { ManageProfileComponent } from './manage-profile/manage-profile.component';
 import { PostComponent } from './manage-post/post/post.component';
 import { PostPlaceholderComponent } from './manage-post/post-placeholder/post-placeholder.component';
-import { PostsService } from './manage-post/services/posts.service';
+import { PostsService } from '../../@core/data/posts.service';
+
 
 @NgModule({
   imports: [
     ThemeModule,
     RouterModule,
-    NbListModule
+    NbListModule,
   ],
   declarations: [
     ProfileComponent,
