@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { delay, map } from 'rxjs/operators';
 import { Observable } from 'rxjs/Rx'
 
-const SIZE_PAGE = 4;  
+const SIZE_PAGE = 3;  
 
 @Injectable()
 export class MyPostsService {
@@ -17,12 +17,12 @@ export class MyPostsService {
     },
     {
       title: 'Đã thích',
-      idPosts: ['1', '2', '3'],
+      idPosts: ['20', '21', '22', '23', '24'],
       posts: []
     },
     {
       title: 'Đang xử lý',
-      idPosts: ['4', '5'],
+      idPosts: ['25', '26', '27', '28', '29'],
       posts: []
     },
   ];
@@ -64,11 +64,6 @@ export class MyPostsService {
   loadPosts(page: number, index: number): Observable<Post[]> {
     const TOTAL_PAGES = Math.round(this.data[index].posts.length / SIZE_PAGE);
     const startIndex = ((page - 1) % TOTAL_PAGES) * SIZE_PAGE;
-
-    console.log(this.data[index].posts.length);
-    console.log(TOTAL_PAGES);
-    console.log(startIndex);
-    console.log('-----');
 
     let loadedPosts = [];
     loadedPosts.push(...this.data[index].posts);

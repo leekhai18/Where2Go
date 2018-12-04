@@ -1,6 +1,15 @@
 <article>
-  <h2>{{post.name}} - {{post.id}}</h2>
-  <p>{{post.address}}</p>
-  <p>{{post.costNeed}}</p>
-  <p>{{post.describe}}</p>
+  <div class="row">
+    <div class="col-4">
+      <span class="__container-img">
+        <img [src]="post.pictures[0]">
+      </span>
+    </div>
+    <div class="col-8">
+      <h2>{{post.name}}</h2>
+      <p>{{post.address}}</p>
+      <p>{{post.costNeed}}</p>
+      <p>{{post.describe}}</p>
+    </div>
+  </div>
 </article>

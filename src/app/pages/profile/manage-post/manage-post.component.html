@@ -5,23 +5,19 @@
     </div>
 
     <nb-tabset fullWidth>
-      <nb-tab *ngFor="let tab of data" [tabTitle]="tab.title" [active]="tab.active">
-        <nb-list
-          nbInfiniteList
-          [threshold]="500"
-          (topThreshold)="loadNext(cards, 0)">
-          
-          <nb-list-item *ngFor="let post of cards[0].posts">
+      <nb-tab *ngFor="let tab of data; let i=index" [tabTitle]="tab.title" [active]="tab.active">
+        <nb-list style="height: 100%;" nbInfiniteList [threshold]="100" (bottomThreshold)="loadNext(cards, i)">
+          <nb-list-item *ngFor="let post of cards[i].posts">
             <ngx-post [post]="post"></ngx-post>
           </nb-list-item>
 
-          <nb-list-item *ngFor="let _ of cards[0].placeholders">
+          <nb-list-item *ngFor="let _ of cards[i].placeholders">
             <ngx-post-placeholder></ngx-post-placeholder>
           </nb-list-item>
-
         </nb-list>
+
+        <!-- <button (click)="loadNext(cards, i)" class="btn btn-secondary btn-demo btn-more">Xem thêm</button> -->
       </nb-tab>
     </nb-tabset>
-    <button (click)="loadNext(cards, 0)" class="btn btn-secondary btn-demo btn-more">Xem thêm</button>
   </div>
 </nb-card>

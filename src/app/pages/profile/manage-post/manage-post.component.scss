@@ -7,6 +7,7 @@
 
 @include nb-install-component() {
   .btn-more {
+    width: 100%;
     height: 3%;
     font-size: 10px;
     text-align: center;
@@ -16,6 +17,7 @@
     border-width: 0.1px;
     opacity: 0.6;
     border-right-width: 5px;
+    border-top: 1px solid #ebeef2;
   }
 
   .infinite-cards {
