@@ -1,6 +1,5 @@
 import { Post } from './../../../../@core/data/posts.service';
 import { Component, OnInit, Input } from '@angular/core';
-
 @Component({
   selector: 'ngx-post',
   templateUrl: './post.component.html',

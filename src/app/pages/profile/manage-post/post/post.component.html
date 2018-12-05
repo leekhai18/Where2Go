@@ -1,15 +1,26 @@
-<article>
+<div class="container">
   <div class="row">
-    <div class="col-4">
+    <div class="col-3">
       <span class="__container-img">
         <img [src]="post.pictures[0]">
       </span>
     </div>
-    <div class="col-8">
-      <h2>{{post.name}}</h2>
-      <p>{{post.address}}</p>
-      <p>{{post.costNeed}}</p>
-      <p>{{post.describe}}</p>
+    <div class="col-9" style="border-left: 1px solid #ebeef2; padding-left: 10px;">
+      <div class="header">
+        <h2>{{post.name}}</h2>
+      </div>
+
+      <div class="mainbody">
+        <p><strong>Địa chỉ: </strong> {{post.address}}</p>
+        <p><strong>Chi phí cần thiết: </strong>{{post.costNeed}}</p>
+        <p><strong>Mô tả: </strong>{{post.describe}}</p>
+      </div>
+
+      <div class="footer">
+        <h6 class="footer-item footer-date">Ngày đăng: {{post.datePosted}}</h6>
+        <h6 class="footer-item footer-like"><i class="icon-like ion-heart"></i> {{post.likeNumber}}</h6>
+        <h6 class="footer-item">{{post.commentNumber}} bình luận</h6>
+      </div>
     </div>
   </div>
-</article>
+</div>
