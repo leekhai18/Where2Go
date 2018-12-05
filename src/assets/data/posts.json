@@ -8,8 +8,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "7",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "7"
   }, {
     "id": "2", 
     "name": "Công viên Văn hoá Đầm Sen", 
@@ -19,8 +18,7 @@
     "pictures": ["assets/images/posts/2_0.JPG", "assets/images/posts/2_1.JPG", "assets/images/posts/2_2.JPG", "assets/images/posts/2_3.JPG", "assets/images/posts/2_4.JPG", "assets/images/posts/2_5.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "164",
-    "commentNumber": "28",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "28"
   }, {
     "id": "3", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -30,8 +28,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "4", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -41,8 +38,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "5", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -52,8 +48,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "6", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -63,8 +58,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "7", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -74,8 +68,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "8", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -85,8 +78,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "9", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -96,8 +88,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "9", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -107,8 +98,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "10", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -118,8 +108,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "11", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -129,8 +118,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "12", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -140,8 +128,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "13", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -151,8 +138,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "14", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -162,8 +148,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "15", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -173,8 +158,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "16", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -184,8 +168,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "17", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -195,8 +178,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "18", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -206,8 +188,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "19", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -217,8 +198,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "20", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -228,8 +208,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "21", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -239,8 +218,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "22", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -250,8 +228,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "23", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -261,8 +238,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "24", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -272,8 +248,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "25", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -283,8 +258,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "26", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -294,8 +268,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "27", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -305,8 +278,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "28", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -316,8 +288,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "29", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -327,8 +298,7 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }, {
     "id": "30", 
     "name": "Khu du lịch Văn hóa Suối Tiên", 
@@ -338,7 +308,6 @@
     "pictures": ["assets/images/posts/1_0.JPG", "assets/images/posts/1_1.JPG", "assets/images/posts/1_2.JPG", "assets/images/posts/1_3.JPG"],
     "datePosted": "02/01/2017",
     "likeNumber": "124",
-    "commentNumber": "20",
-    "comments": ["1", "2", "3", "4", "5", "6", "7"]
+    "commentNumber": "20"
   }
 ]
