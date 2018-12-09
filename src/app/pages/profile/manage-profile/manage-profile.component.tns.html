@@ -1,0 +1,59 @@
+<StackLayout>
+  <Label text="ManageProfileComponent works" textWrap="true"></Label>
+  <Label text="This is a migrated component" textWrap="true"></Label>
+  <Label text="Update it to provide the UI elements required in your mobile app" textWrap="true"></Label>
+</StackLayout>
+
+<!--
+Original Web template:
+
+<nb-card style="height: 750px;">
+  <nb-card-header style="font-size:1.25rem;">Thông tin cá nhân</nb-card-header>
+  <nb-card-body>
+    <div>
+      <img class="avatar" [src]="user?.picture" alt="Ảnh đại diện">
+      <input  accept="image/*, image/heic, image/heif" 
+              multiple="" name="composer_photo" title="Chọn ảnh để tải lên"
+              display="inline-block" type="file" class="input-avatar"
+              #imageInput
+              (change)="processFile(imageInput)">
+      <a class="avatar"></a>
+    </div>
+
+    <div style="margin-top: 3rem;">
+      <div class="form-group">
+        <label for="inputFirstName">Tên</label>
+        <input [disabled]="!enableEditName" [value]="user?.name" type="text" class="form-control" id="inputName"
+          placeholder="Tên">
+        <i *ngIf="!enableEditName" (click)="editName()" class="nb-edit icon-edit"></i>
+        <i *ngIf="enableEditName" (click)="editName()" class="nb-checkmark icon-edit"></i>
+      </div>
+
+      <div class="form-group">
+        <label for="inputLastName">Email</label>
+        <input [disabled]="!enableEditEmail" [value]="user?.email" type="email" class="form-control" id="inputEmail"
+          placeholder="Email">
+        <i *ngIf="!enableEditEmail" (click)="editEmail()" class="nb-edit icon-edit"></i>
+        <i *ngIf="enableEditEmail" (click)="editEmail()" class="nb-checkmark icon-edit"></i>
+      </div>
+
+      <div class="form-group">
+        <label for="inputLastName">Số điện thoại</label>
+        <input [disabled]="!enableEditPhone" [value]="user?.phone" type="tel" class="form-control" id="inputPhone"
+          placeholder="Số điện thoại">
+        <i *ngIf="!enableEditPhone" (click)="editPhone()" class="nb-edit icon-edit"></i>
+        <i *ngIf="enableEditPhone" (click)="editPhone()" class="nb-checkmark icon-edit"></i>
+      </div>
+    </div>
+
+    <div style="margin-top: 3rem;">
+      <a [routerLink]="[ '/pages/write-post' ]">
+        <button class="btn btn-success btn-new-post">
+          <i style="font-weight: 600; font-size: 15px;" class="menu-icon nb-compose ng-star-inserted"></i>
+          Viết bài
+        </button>
+      </a>
+    </div>
+  </nb-card-body>
+</nb-card>
+-->

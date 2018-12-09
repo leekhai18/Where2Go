@@ -14,9 +14,10 @@ import { AppComponent } from './app.component';
     NativeScriptModule,
     AppRoutingModule,
     NativeScriptFormsModule,
-    NativeScriptHttpClientModule
+    NativeScriptHttpClientModule,
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA]
 })

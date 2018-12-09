@@ -1,0 +1,33 @@
+<StackLayout>
+  <Label text="ManagePostComponent works" textWrap="true"></Label>
+  <Label text="This is a migrated component" textWrap="true"></Label>
+  <Label text="Update it to provide the UI elements required in your mobile app" textWrap="true"></Label>
+</StackLayout>
+
+<!--
+Original Web template:
+
+<nb-card size="large">
+  <div class="consumption-table">
+    <div class="table-header">
+      <div style="font-size:1.25rem;">Bài đăng</div>
+    </div>
+
+    <nb-tabset fullWidth>
+      <nb-tab *ngFor="let tab of data; let i=index" [tabTitle]="tab.title" [active]="tab.active">
+        <nb-list style="height: 100%;" nbInfiniteList [threshold]="100" (bottomThreshold)="loadNext(cards, i)">
+          <nb-list-item *ngFor="let post of cards[i].posts">
+            <ngx-post [post]="post"></ngx-post>
+          </nb-list-item>
+
+          <nb-list-item *ngFor="let _ of cards[i].placeholders">
+            <ngx-post-placeholder></ngx-post-placeholder>
+          </nb-list-item>
+        </nb-list>
+
+        <!-- <button (click)="loadNext(cards, i)" class="btn btn-secondary btn-demo btn-more">Xem thêm</button> ->
+      </nb-tab>
+    </nb-tabset>
+  </div>
+</nb-card>
+-->
