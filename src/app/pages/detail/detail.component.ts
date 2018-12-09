@@ -15,4 +15,5 @@ export class DetailComponent {
   dismiss() {
     this.ref.close();
   }
+
 }
