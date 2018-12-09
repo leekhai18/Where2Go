@@ -1,3 +1,7 @@
+# NativeScriptnode_modules/
+platforms/
+hooks/
+src/**/*.js
 # compiled output
 /dist
 /tmp

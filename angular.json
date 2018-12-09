@@ -171,5 +171,8 @@
     "@schematics/angular:directive": {
       "prefix": "ngx"
     }
+  },
+  "cli": {
+    "defaultCollection": "@nativescript/schematics"
   }
 }
