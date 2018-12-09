@@ -6,6 +6,8 @@ import { PlacesModule } from './places/places.module';
 import { WritePostModule } from './write-post/write-post.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { ThemeModule } from '../@theme/theme.module';
+import { DetailComponent } from './detail/detail.component';
+import { NbDialogModule } from '@nebular/theme';
 
 const PAGES_COMPONENTS = [
   PagesComponent,
@@ -17,11 +19,16 @@ const PAGES_COMPONENTS = [
     ThemeModule,
     ProfileModule,
     PlacesModule,
-    WritePostModule
+    WritePostModule,
+    NbDialogModule.forChild()
   ],
   declarations: [
     ...PAGES_COMPONENTS,
+    DetailComponent,
   ],
+  entryComponents: [
+    DetailComponent
+  ]
 })
 export class PagesModule {
 }
