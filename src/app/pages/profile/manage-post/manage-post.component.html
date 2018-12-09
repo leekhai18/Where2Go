@@ -7,7 +7,7 @@
     <nb-tabset fullWidth>
       <nb-tab *ngFor="let tab of data; let i=index" [tabTitle]="tab.title" [active]="tab.active">
         <nb-list style="height: 100%;" nbInfiniteList [threshold]="100" (bottomThreshold)="loadNext(cards, i)">
-          <nb-list-item *ngFor="let post of cards[i].posts">
+          <nb-list-item *ngFor="let post of cards[i].posts" (click)="viewDetail(post)">
             <ngx-post [post]="post"></ngx-post>
           </nb-list-item>
 

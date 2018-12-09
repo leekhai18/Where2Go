@@ -1,5 +1,8 @@
+import { NbDialogService } from '@nebular/theme';
 import { Component, OnInit } from '@angular/core';
 import { MyPostsService } from '../../../@core/data/my-posts.service';
+import { DetailComponent } from '../../detail/detail.component';
+import { UserService } from '../../../@core/data/users.service';
 
 
 @Component({
@@ -8,7 +11,7 @@ import { MyPostsService } from '../../../@core/data/my-posts.service';
   styleUrls: ['./manage-post.component.scss']
 })
 export class ManagePostComponent implements OnInit {
-
+  user: any;
   data: Array<any>;
 
   cards = [{
@@ -28,15 +31,31 @@ export class ManagePostComponent implements OnInit {
     pageToLoadNext: 1,
   }];
 
-  constructor(private myPostsService: MyPostsService) {
+  constructor(private myPostsService: MyPostsService,
+              private dialogService: NbDialogService,
+              private userService: UserService) {
     this.data = this.myPostsService.getData;
   }
 
   ngOnInit() {
+    this.userService.getUsers()
+      .subscribe((users: any) => this.user = users.nick);
   }
 
   loadNext(cardDatas, index) {
     this.myPostsService.loadNext(cardDatas, index);
   }
 
+  openDetailDialog(post) {
+    this.dialogService.open(DetailComponent, {
+      context: {
+        post: post,
+        user: this.user
+      },
+    });
+  }
+
+  viewDetail(post) {
+    this.openDetailDialog(post);
+  }
 }

@@ -8,7 +8,8 @@ import { NbDialogRef } from '@nebular/theme';
 })
 export class DetailComponent {
 
-  @Input() title: string;
+  @Input() post: Object;
+  @Input() user: Object;
 
   constructor(protected ref: NbDialogRef<DetailComponent>) {}
 

@@ -2,6 +2,7 @@
 @include nb-install-component() {
   nb-card {
     width: 1500px;
+    padding: 1%;
   }
   @media screen and (max-width: 1600px) {
     nb-card {
@@ -63,7 +64,6 @@
       width: 300px;
     }
   }
-
   img {
     max-width: 100%;
   }
@@ -113,11 +113,8 @@
     -webkit-animation-duration: .3s;
     animation-duration: .3s;
   }
-  .card {
-    margin-top: 50px;
-    background: #eee;
-    padding: 3em;
-    line-height: 1.5em;
+  .header {
+    border-bottom: 1px solid #ebeef2;
   }
   .details {
     display: -webkit-box;
@@ -130,88 +127,54 @@
     -ms-flex-direction: column;
     flex-direction: column;
   }
+  .describe {
+    margin: 2% 0;
+  }
+  .avatar {
+    border-radius: 50% !important;
+    flex-shrink: 0;
+    background: #ffffff;
+    border: solid 1px #bcc3cc;
+    width: 100%;
+    position: relative;
+    display: block;
+    margin: auto;
+  }
+  .user-name {
+    margin: 10%;
+    font-weight: bold;
+    font-family: fantasy;
+    text-align: center;
+  }
   .colors {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
   }
-  .product-title,
-  .price,
-  .sizes,
-  .colors {
+  .post-title {
     text-transform: UPPERCASE;
     font-weight: bold;
   }
-  .checked,
-  .price span {
-    color: #ff9f1a;
+  .checked {
+    color: #40dcb2;
   }
-  .product-title,
-  .rating,
-  .product-description,
-  .price,
-  .vote,
-  .sizes {
-    margin-bottom: 15px;
-  }
-  .product-title {
-    margin-top: 0;
-  }
-  .size {
-    margin-right: 10px;
-  }
-  .size:first-of-type {
-    margin-left: 40px;
-  }
-  .color {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 10px;
-    height: 2em;
-    width: 2em;
-    border-radius: 2px;
-  }
-  .color:first-of-type {
-    margin-left: 20px;
-  }
-  .add-to-cart,
-  .like {
-    background: #ff9f1a;
-    padding: 1.2em 1.5em;
-    border: none;
-    text-transform: UPPERCASE;
-    font-weight: bold;
-    color: #fff;
-    -webkit-transition: background .3s ease;
-    transition: background .3s ease;
-  }
-  .add-to-cart:hover,
-  .like:hover {
-    background: #b36800;
-    color: #fff;
-  }
-  .not-available {
+  .status {
+    border-top: 1px solid #ebeef2;
+    border-bottom: 1px solid #ebeef2;
     text-align: center;
-    line-height: 2em;
+    padding: 1%;
   }
-  .not-available:before {
-    font-family: fontawesome;
-    content: "\f00d";
-    color: #fff;
+  .status-item {
+    font-size: 1.125rem;
+
+    &:hover {
+      background-color: aliceblue;
+      cursor: pointer;
+    }
   }
-  .orange {
-    background: #ff9f1a;
-  }
-  .green {
-    background: #85ad00;
-  }
-  .blue {
-    background: #0076ad;
-  }
-  .tooltip-inner {
-    padding: 1.3em;
-  }
+
+  
   @-webkit-keyframes opacity {
     0% {
       opacity: 0;

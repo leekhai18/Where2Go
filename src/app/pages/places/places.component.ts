@@ -12,7 +12,7 @@ export class PlacesComponent {
   open() {
     this.dialogService.open(DetailComponent, {
       context: {
-        title: 'This is a title passed to the dialog component',
+        post: {}
       },
     });
   }
