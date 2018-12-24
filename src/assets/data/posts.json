@@ -14,7 +14,8 @@
 		],
 		"datePosted": "02/01/2017",
 		"likeNumber": "124",
-		"commentNumber": "7"
+		"commentNumber": "7",
+		"status": "0"
 	},
 	{
 		"id": "2",
@@ -31,7 +32,8 @@
 		],
 		"datePosted": "02/01/2018",
 		"likeNumber": "1000",
-		"commentNumber": "500"
+		"commentNumber": "500",
+		"status": "1"
 	},
 	{
 		"id": "3",
@@ -48,7 +50,8 @@
 		],
 		"datePosted": "02/09/2018",
 		"likeNumber": "3000",
-		"commentNumber": "876"
+		"commentNumber": "876",
+		"status": "2"
 	},
 	{
 		"id": "4",
@@ -65,7 +68,8 @@
 		],
 		"datePosted": "02/05/2018",
 		"likeNumber": "2330",
-		"commentNumber": "789"
+		"commentNumber": "789",
+		"status": "2"
 	},
 	{
 		"id": "5",
@@ -82,7 +86,8 @@
 		],
 		"datePosted": "02/09/2018",
 		"likeNumber": "5000",
-		"commentNumber": "1045"
+		"commentNumber": "1045",
+		"status": "2"
 	},
 	{
 		"id": "6",
@@ -99,7 +104,8 @@
 		],
 		"datePosted": "25/11/2018",
 		"likeNumber": "5000",
-		"commentNumber": "3329"
+		"commentNumber": "3329",
+		"status": "1"
 	},
 	{
 		"id": "7",
@@ -116,7 +122,8 @@
 		],
 		"datePosted": "22/01/2018",
 		"likeNumber": "2900",
-		"commentNumber": "1045"
+		"commentNumber": "1045",
+		"status": "1"
 	},
 	{
 		"id": "8",
@@ -133,7 +140,8 @@
 		],
 		"datePosted": "02/04/2018",
 		"likeNumber": "4879",
-		"commentNumber": "3400"
+		"commentNumber": "3400",
+		"status": "1"
 	},
 	{
 		"id": "9",
@@ -150,7 +158,8 @@
 		],
 		"datePosted": "11/10/2018",
 		"likeNumber": "10000",
-		"commentNumber": "7597"
+		"commentNumber": "7597",
+		"status": "1"
 	},
 	{
 		"id": "10",
@@ -167,7 +176,8 @@
 		],
 		"datePosted": "02/01/2018",
 		"likeNumber": "1760",
-		"commentNumber": "743"
+		"commentNumber": "743",
+		"status": "0"
 	},
 	{
 		"id": "11",
@@ -184,7 +194,8 @@
 		],
 		"datePosted": "16/01/2018",
 		"likeNumber": "4069",
-		"commentNumber": "2754"
+		"commentNumber": "2754",
+		"status": "0"
 	},
 	{
 		"id": "12",
@@ -201,7 +212,8 @@
 		],
 		"datePosted": "11/01/2018",
 		"likeNumber": "609",
-		"commentNumber": "130"
+		"commentNumber": "130",
+		"status": "0"
 	},
 	{
 		"id": "13",
@@ -218,7 +230,8 @@
 		],
 		"datePosted": "19/07/2018",
 		"likeNumber": "14000",
-		"commentNumber": "9877"
+		"commentNumber": "9877",
+		"status": "0"
 	},
 	{
 		"id": "14",
@@ -235,7 +248,8 @@
 		],
 		"datePosted": "15/03/2018",
 		"likeNumber": "15000",
-		"commentNumber": "130064"
+		"commentNumber": "130064",
+		"status": "1"
 	},
 	{
 		"id": "15",
@@ -252,7 +266,8 @@
 		],
 		"datePosted": "07/08/2018",
 		"likeNumber": "10504",
-		"commentNumber": "6794"
+		"commentNumber": "6794",
+		"status": "2"
 	},
 	{
 		"id": "16",
@@ -269,7 +284,8 @@
 		],
 		"datePosted": "11/012/2016",
 		"likeNumber": "3498",
-		"commentNumber": "1298"
+		"commentNumber": "1298",
+		"status": "2"
 	},
 	{
 		"id": "17",
@@ -286,7 +302,8 @@
 		],
 		"datePosted": "14/06/2018",
 		"likeNumber": "16000",
-		"commentNumber": "12367"
+		"commentNumber": "12367",
+		"status": "1"
 	},
 	{
 		"id": "18",
@@ -303,7 +320,8 @@
 		],
 		"datePosted": "29/04/2018",
 		"likeNumber": "17890",
-		"commentNumber": "14578"
+		"commentNumber": "14578",
+		"status": "0"
 	},
 	{
 		"id": "19",
@@ -320,7 +338,8 @@
 		],
 		"datePosted": "22/01/2018",
 		"likeNumber": "13992",
-		"commentNumber": "8067"
+		"commentNumber": "8067",
+		"status": "0"
 	},
 	{
 		"id": "20",
@@ -337,7 +356,8 @@
 		],
 		"datePosted": "12/08/2018",
 		"likeNumber": "7893",
-		"commentNumber": "4367"
+		"commentNumber": "4367",
+		"status": "1"
 	},
 	{
 		"id": "21",
@@ -354,7 +374,8 @@
 		],
 		"datePosted": "02/01/2018",
 		"likeNumber": "1000",
-		"commentNumber": "500"
+		"commentNumber": "500",
+		"status": "1"
 	},
 	{
 		"id": "22",
@@ -371,7 +392,8 @@
 		],
 		"datePosted": "22/10/2018",
 		"likeNumber": "9087",
-		"commentNumber": "4607"
+		"commentNumber": "4607",
+		"status": "2"
 	},
 	{
 		"id": "23",
@@ -388,7 +410,8 @@
 		],
 		"datePosted": "22/10/2018",
 		"likeNumber": "9087",
-		"commentNumber": "4607"
+		"commentNumber": "4607",
+		"status": "2"
 	},
 	{
 		"id": "24",
@@ -405,7 +428,8 @@
 		],
 		"datePosted": "22/10/2018",
 		"likeNumber": "9087",
-		"commentNumber": "4607"
+		"commentNumber": "4607",
+		"status": "2"
 	},
 	{
 		"id": "25",
@@ -422,7 +446,8 @@
 		],
 		"datePosted": "22/10/2018",
 		"likeNumber": "9087",
-		"commentNumber": "4607"
+		"commentNumber": "4607",
+		"status": "0"
 	},
 	{
 		"id": "26",
@@ -439,7 +464,8 @@
 		],
 		"datePosted": "22/10/2018",
 		"likeNumber": "9087",
-		"commentNumber": "4607"
+		"commentNumber": "4607",
+		"status": "0"
 	},
 	{
 		"id": "27",
@@ -456,7 +482,8 @@
 		],
 		"datePosted": "22/10/2018",
 		"likeNumber": "9087",
-		"commentNumber": "4607"
+		"commentNumber": "4607",
+		"status": "1"
 	},
 	{
 		"id": "28",
@@ -473,7 +500,8 @@
 		],
 		"datePosted": "22/10/2018",
 		"likeNumber": "9087",
-		"commentNumber": "4607"
+		"commentNumber": "4607",
+		"status": "1"
 	},
 	{
 		"id": "29",
@@ -490,7 +518,8 @@
 		],
 		"datePosted": "22/10/2018",
 		"likeNumber": "9087",
-		"commentNumber": "4607"
+		"commentNumber": "4607",
+		"status": "2"
 	},
 	{
 		"id": "30",
@@ -507,7 +536,8 @@
 		],
 		"datePosted": "22/10/2018",
 		"likeNumber": "9087",
-		"commentNumber": "4607"
+		"commentNumber": "4607",
+		"status": "0"
 	},
 	{
 		"id": "31",
@@ -524,7 +554,8 @@
 		],
 		"datePosted": "22/10/2018",
 		"likeNumber": "9087",
-		"commentNumber": "4607"
+		"commentNumber": "4607",
+		"status": "1"
 	},
 	{
 		"id": "32",
@@ -541,7 +572,8 @@
 		],
 		"datePosted": "22/10/2018",
 		"likeNumber": "9087",
-		"commentNumber": "4607"
+		"commentNumber": "4607",
+		"status": "1"
 	},
 	{
 		"id": "33",
@@ -558,6 +590,7 @@
 		],
 		"datePosted": "22/10/2018",
 		"likeNumber": "9087",
-		"commentNumber": "4607"
+		"commentNumber": "4607",
+		"status": "0"
 	}
 ]
