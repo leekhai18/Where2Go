@@ -56,6 +56,7 @@ export class ManagePostComponent implements OnInit {
   }
 
   viewDetail(post) {
+    console.log(post);
     this.openDetailDialog(post);
   }
 }
