@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { NbDialogRef } from '@nebular/theme';
+import { Post } from '../../@core/data/posts.service';
 
 @Component({
   selector: 'ngx-detail',
@@ -8,13 +9,12 @@ import { NbDialogRef } from '@nebular/theme';
 })
 export class DetailComponent {
 
-  @Input() post: Object;
+  @Input() post: Post;
   @Input() user: Object;
 
-  constructor(protected ref: NbDialogRef<DetailComponent>) {}
+  constructor(protected ref: NbDialogRef<DetailComponent>) { }
 
   dismiss() {
     this.ref.close();
   }
-
 }

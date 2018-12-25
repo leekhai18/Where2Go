@@ -12,7 +12,9 @@ export class Post {
   datePosted: string;
   likeNumber: string;
   commentNumber: string;
-  comments: Array<string>;
+  status: string;
+  reviewNumber: string;
+  rate: string;
 }
 
 @Injectable()

@@ -15,4 +15,11 @@ export class PostComponent implements OnInit {
   ngOnInit() {
   }
 
+  describe = () => {
+    if (this.post.describe.length > 420) {
+      return this.post.describe.substring(0, 420) + '...';
+    }
+
+    return this.post.describe;
+  }
 }

@@ -130,6 +130,11 @@
   }
   .describe {
     margin: 2% 0;
+    .content {
+      max-height: 100px;
+      overflow: hidden;
+      overflow-y: auto;
+    }
   }
   .avatar {
     border-radius: 50% !important;
@@ -168,14 +173,50 @@
   }
   .status-item {
     font-size: 1.125rem;
-
     &:hover {
       background-color: aliceblue;
       cursor: pointer;
     }
   }
-
-  
+  .comment {
+    display: inline-flex;
+    .comment-avatar {
+      border-radius: 50% !important;
+      background: #ffffff;
+      width: 6%;
+      height: 6%;
+      max-width: 50px;
+      max-height: 50px;
+      margin: 1%;
+    }
+    .comment-content-container {
+      background-color: #eff1f3;
+      font-size: 13px;
+      border-radius: 18px;
+      display: block;
+      line-height: 16px;
+      margin-top: 1%;;
+    }
+    .comment-content {
+      padding: 8px 10px;
+      margin-bottom: 1%;;
+    }
+    .comment-username {
+      color: #227c64
+    }
+    .comment-extra {
+      font-size: 12px;
+      line-height: 12px;
+      margin-bottom: 3px;
+      margin-left: 10px;
+      padding-top: 3px;
+      color: #90949c;
+      min-height: 15px;
+      clear: both;
+      font-weight: normal;
+      cursor: pointer;
+    }
+  }
   @-webkit-keyframes opacity {
     0% {
       opacity: 0;

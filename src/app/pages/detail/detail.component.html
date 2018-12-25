@@ -33,7 +33,7 @@
               <span class="fa fa-star-half-alt checked"></span>
               <span class="far fa-star checked"></span>
             </div>
-            <span class="review-no"> 41 đánh giá</span>
+            <span class="review-no"> {{post.reviewNumber}} đánh giá</span>
           </div>
 
         </div>
@@ -46,7 +46,7 @@
           </div>
           <div class="col-10">
             <p><strong>Chi phí cần thiết: </strong>{{post.costNeed}}</p>
-            <p><strong>Mô tả: </strong>{{post.describe}}</p>
+            <p class="content"><strong>Mô tả: </strong>{{post.describe}}</p>
           </div>
         </div>
 
@@ -54,9 +54,33 @@
           <span class="status-item col"><i class="fa fa-calendar-alt"></i> {{post.datePosted}}</span>
           <span class="status-item col"><i class=""></i> khá đông</span>
           <span class="status-item col"><i class="fa fa-heart"></i> {{post.likeNumber}} lượt thích</span>
-          <span class="status-item col"><i class="fa fa-comment-alt"></i> {{post.commentNumber}} bình luận</span>    
+          <span class="status-item col"><i class="fa fa-comment-alt"></i> {{post.commentNumber}} bình luận</span>
         </div>
-       
+
+        <div class="comment-available-container">
+
+          <div class="comment">
+            <img class="comment-avatar" src="./../../../assets/images/users/congphuong.jpg">
+            <div>
+              <div class="comment-content-container">
+                <p class="comment-content"><strong class="comment-username">Trần Thiện Hoà</strong>
+                  comment-available-container comment-available-container comment-available-container
+                  comment-available-container</p>
+              </div>
+              <div class="comment-extra">
+                <a role="button">Thích</a>
+                <span aria-hidden="true" role="presentation"> · </span>
+                <a role="button">Trả lời</a>
+                <span aria-hidden="true" role="presentation"> · </span>
+                <a role="button">4 ngày</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="comment-new-container">
+        </div>
+
       </div>
     </div>
   </div>
