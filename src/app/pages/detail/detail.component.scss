@@ -178,44 +178,70 @@
       cursor: pointer;
     }
   }
-  .comment {
+  .comment-avatar {
+    border-radius: 50% !important;
+    background: #ffffff;
+    width: 6%;
+    height: 6%;
+    max-width: 50px;
+    max-height: 50px;
+    margin: 1%;
+  }
+  .comment-content-container {
+    background-color: #eff1f3;
+    font-size: 13px;
+    border-radius: 18px;
+    display: block;
+    line-height: 16px;
+    margin-top: 1%;
+    ;
+  }
+  .comment-content {
+    padding: 8px 10px;
+    margin-bottom: 1%;
+    ;
+  }
+  .comment-username {
+    color: #227c64
+  }
+  .comment-extra {
+    font-size: 12px;
+    line-height: 12px;
+    margin-bottom: 3px;
+    margin-left: 10px;
+    padding-top: 3px;
+    color: #90949c;
+    min-height: 15px;
+    clear: both;
+    font-weight: normal;
+  }
+  .comment-container {
     display: inline-flex;
-    .comment-avatar {
-      border-radius: 50% !important;
-      background: #ffffff;
-      width: 6%;
-      height: 6%;
-      max-width: 50px;
-      max-height: 50px;
-      margin: 1%;
-    }
-    .comment-content-container {
-      background-color: #eff1f3;
-      font-size: 13px;
-      border-radius: 18px;
-      display: block;
-      line-height: 16px;
-      margin-top: 1%;;
-    }
-    .comment-content {
-      padding: 8px 10px;
-      margin-bottom: 1%;;
-    }
-    .comment-username {
-      color: #227c64
-    }
-    .comment-extra {
-      font-size: 12px;
-      line-height: 12px;
-      margin-bottom: 3px;
-      margin-left: 10px;
-      padding-top: 3px;
-      color: #90949c;
-      min-height: 15px;
-      clear: both;
-      font-weight: normal;
-      cursor: pointer;
-    }
+  }
+  .comment-available-container {
+    max-height: 50%;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+  .comment-new-container {
+    background-color: #f5f6f7;
+    border-top: 1px solid #dddfe2;
+    display: inline-flex;
+    margin-top: 2%;
+    padding-right: 1%;
+  }
+  .comment-new-input {
+    border-radius: 18px;
+    border: 1px solid #dddfe2;
+    font-size: 13px;
+    height: 35px;
+    width: -webkit-fill-available;
+    margin: auto;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  *:focus {
+    outline: none;
   }
   @-webkit-keyframes opacity {
     0% {
