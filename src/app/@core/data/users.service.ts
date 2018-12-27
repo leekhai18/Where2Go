@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -18,7 +18,20 @@ export class User {
 export class UserService {
   private usersUrl = 'api/users';
 
-  constructor(private http: HttpClient) { }
+  // Temporatory
+  private data = {
+    id: 1,
+    name: 'Lê Khải',
+    picture: 'assets/images/users/leekhai.png',
+    email: 'leekhai18@gmail.com',
+    phone: '0328372204'
+  };
+  private user: BehaviorSubject<User> = new BehaviorSubject(this.data);
+  userActive = this.user.asObservable();
+  // Temporatory
+
+  constructor(private http: HttpClient) {
+  }
 
   get(): Observable<User[]> {
     return this.http.get<User[]>(this.usersUrl);
@@ -30,6 +43,7 @@ export class UserService {
   }
 
   update(user: User): Observable<User> {
+    this.user.next(user);
     return this.http.put<User>(this.usersUrl, user, httpOptions);
   }
 }

@@ -24,9 +24,10 @@ export class ManageProfileComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   ngOnInit() {
-    this.userService.getUser(1).subscribe((user) => {
-      this.user = user;
-    });
+    // this.userService.getUser(1).subscribe((user) => {
+    //   this.user = user;
+    // });
+    this.userService.userActive.subscribe(user => this.user = user);
   }
 
   editName() {
@@ -42,7 +43,7 @@ export class ManageProfileComponent implements OnInit {
   editEmail() {
     if (this.enableEditEmail) {
       this.enableEditEmail = false;
-      this.user.name = (<HTMLInputElement>document.getElementById('inputEmail')).value;
+      this.user.email = (<HTMLInputElement>document.getElementById('inputEmail')).value;
       this.userService.update(this.user).subscribe();
     } else {
       this.enableEditEmail = true;
@@ -52,7 +53,7 @@ export class ManageProfileComponent implements OnInit {
   editPhone() {
     if (this.enableEditPhone) {
       this.enableEditPhone = false;
-      this.user.name = (<HTMLInputElement>document.getElementById('inputPhone')).value;
+      this.user.phone = (<HTMLInputElement>document.getElementById('inputPhone')).value;
       this.userService.update(this.user).subscribe();
     } else {
       this.enableEditPhone = true;
