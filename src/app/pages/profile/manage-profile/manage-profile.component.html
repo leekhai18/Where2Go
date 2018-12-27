@@ -2,7 +2,7 @@
   <nb-card-header style="font-size:1.25rem;">Thông tin cá nhân</nb-card-header>
   <nb-card-body>
     <div>
-      <img class="avatar" [src]="user?.picture" alt="Ảnh đại diện">
+      <img *ngIf="user" class="avatar" [src]="user?.picture" alt="Ảnh đại diện">
       <input  accept="image/*, image/heic, image/heif" 
               multiple="" name="composer_photo" title="Chọn ảnh để tải lên"
               display="inline-block" type="file" class="input-avatar"

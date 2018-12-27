@@ -2,20 +2,19 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-export class User {
+export class Comment {
   id: string;
-  name: string;
-  picture: string;
-  email: string;
-  phone: string;
+  postId: string;
+  userId: string;
+  content: string;
 }
 
 @Injectable()
-export class UserService {
+export class CommentsService {
 
   constructor(private http: HttpClient) { }
 
-  load(): Observable<User[]> {
-    return this.http.get<User[]>('assets/data/users.json');
+  load(): Observable<Comment[]> {
+    return this.http.get<Comment[]>('assets/data/comments.json');
   }
 }

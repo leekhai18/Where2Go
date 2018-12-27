@@ -38,8 +38,9 @@ export class ManagePostComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.userService.getUsers()
-      .subscribe((users: any) => this.user = users.nick);
+    this.userService.load().subscribe((users) => {
+      this.user = users.find(user => user.id == "1");
+    });
   }
 
   loadNext(cardDatas, index) {
@@ -50,13 +51,11 @@ export class ManagePostComponent implements OnInit {
     this.dialogService.open(DetailComponent, {
       context: {
         post: post,
-        user: this.user
       },
     });
   }
 
   viewDetail(post) {
-    console.log(post);
     this.openDetailDialog(post);
   }
 }

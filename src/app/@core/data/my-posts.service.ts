@@ -71,7 +71,7 @@ export class MyPostsService {
     return Observable.of(loadedPosts)
       .pipe(
         map(posts => posts.splice(startIndex, SIZE_PAGE)),
-        delay(1500),
+        delay(1000),
       );
   }
 

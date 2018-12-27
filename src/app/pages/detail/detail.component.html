@@ -4,26 +4,26 @@
       <div class="preview col-lg-6">
 
         <div class="preview-pic tab-content">
-          <div class="tab-pane active" id="0"><img [src]="post.pictures[0]" /></div>
-          <div class="tab-pane" id="1"><img [src]="post.pictures[1]" /></div>
-          <div class="tab-pane" id="2"><img [src]="post.pictures[2]" /></div>
-          <div class="tab-pane" id="3"><img [src]="post.pictures[3]" /></div>
-          <div class="tab-pane" id="4"><img [src]="post.pictures[4]" /></div>
+          <div class="tab-pane active" id="0"><img [src]="post?.pictures[0]" /></div>
+          <div class="tab-pane" id="1"><img [src]="post?.pictures[1]" /></div>
+          <div class="tab-pane" id="2"><img [src]="post?.pictures[2]" /></div>
+          <div class="tab-pane" id="3"><img [src]="post?.pictures[3]" /></div>
+          <div class="tab-pane" id="4"><img [src]="post?.pictures[4]" /></div>
         </div>
         <ul class="preview-thumbnail nav nav-tabs">
-          <li class="active"><a data-target="#0" data-toggle="tab"><img [src]="post.pictures[0]" /></a></li>
-          <li><a data-target="#1" data-toggle="tab"><img [src]="post.pictures[1]" /></a></li>
-          <li><a data-target="#2" data-toggle="tab"><img [src]="post.pictures[2]" /></a></li>
-          <li><a data-target="#3" data-toggle="tab"><img [src]="post.pictures[3]" /></a></li>
-          <li><a data-target="#4" data-toggle="tab"><img [src]="post.pictures[4]" /></a></li>
+          <li class="active"><a data-target="#0" data-toggle="tab"><img [src]="post?.pictures[0]" /></a></li>
+          <li><a data-target="#1" data-toggle="tab"><img [src]="post?.pictures[1]" /></a></li>
+          <li><a data-target="#2" data-toggle="tab"><img [src]="post?.pictures[2]" /></a></li>
+          <li><a data-target="#3" data-toggle="tab"><img [src]="post?.pictures[3]" /></a></li>
+          <li><a data-target="#4" data-toggle="tab"><img [src]="post?.pictures[4]" /></a></li>
         </ul>
 
       </div>
       <div class="details col-lg-6">
         <div class="header row">
           <div class="col-10">
-            <h3 class="post-title">{{post.name}}</h3>
-            <h6><strong>Địa chỉ: </strong> {{post.address}}</h6>
+            <h3 class="post-title">{{post?.name}}</h3>
+            <h6><strong>Địa chỉ: </strong> {{post?.address}}</h6>
           </div>
           <div class="rating col-2">
             <div style="margin-bottom: 5px">
@@ -33,38 +33,37 @@
               <span class="fa fa-star-half-alt checked"></span>
               <span class="far fa-star checked"></span>
             </div>
-            <span class="review-no"> {{post.reviewNumber}} đánh giá</span>
+            <span class="review-no"> {{post?.reviewNumber}} đánh giá</span>
           </div>
 
         </div>
 
         <div class="describe row">
           <div class="col-2">
-            <img class="avatar" [src]="user?.picture" alt="Ảnh đại diện">
+            <img *ngIf="user" class="avatar" [src]="user?.picture" alt="Ảnh đại diện">
             <a class="avatar"></a>
             <p class="user-name">{{user?.name}}</p>
           </div>
           <div class="col-10">
-            <p><strong>Chi phí cần thiết: </strong>{{post.costNeed}}</p>
-            <p class="content"><strong>Mô tả: </strong>{{post.describe}}</p>
+            <p><strong>Chi phí cần thiết: </strong>{{post?.costNeed}}</p>
+            <p class="content"><strong>Mô tả: </strong>{{post?.describe}}</p>
           </div>
         </div>
 
         <div class="status row">
-          <span class="status-item col"><i class="fa fa-calendar-alt"></i> {{post.datePosted}}</span>
+          <span class="status-item col"><i class="fa fa-calendar-alt"></i> {{post?.datePosted}}</span>
           <span class="status-item col"><i class=""></i> khá đông</span>
-          <span class="status-item col"><i class="fa fa-heart"></i> {{post.likeNumber}} lượt thích</span>
-          <span class="status-item col"><i class="fa fa-comment-alt"></i> {{post.commentNumber}} bình luận</span>
+          <span class="status-item col"><i class="fa fa-heart"></i> {{post?.likeNumber}} lượt thích</span>
+          <span class="status-item col"><i class="fa fa-comment-alt"></i> {{post?.commentNumber}} bình luận</span>
         </div>
 
         <div class="comment-available-container">
-          <div class="comment-container">
-            <img class="comment-avatar" src="./../../../assets/images/users/congphuong.jpg">
-            <div>
+          <div *ngFor="let comment of comments" class="comment-container">
+            <img *ngIf="comment.user" class="comment-avatar" [src]="comment.user.picture">
+            <div *ngIf="comment.user">
               <div class="comment-content-container">
-                <p class="comment-content"><strong class="comment-username">Trần Thiện Hoà</strong>
-                  comment-available-container comment-available-container comment-available-container
-                  comment-available-container</p>
+                <p class="comment-content"><strong class="comment-username">{{comment.user.name}}</strong>
+                  {{comment.content}}</p>
               </div>
               <div class="comment-extra">
                 <a role="button">Thích</a>
@@ -75,67 +74,11 @@
               </div>
             </div>
           </div>
-
-          <div class="comment-container">
-            <img class="comment-avatar" src="./../../../assets/images/users/congphuong.jpg">
-            <div>
-              <div class="comment-content-container">
-                <p class="comment-content"><strong class="comment-username">Trần Thiện Hoà</strong>
-                  comment-available-container comment-available-container comment-available-container
-                  comment-available-container</p>
-              </div>
-              <div class="comment-extra">
-                <a role="button">Thích</a>
-                <span aria-hidden="true" role="presentation"> · </span>
-                <a role="button">Trả lời</a>
-                <span aria-hidden="true" role="presentation"> · </span>
-                <a role="button">4 ngày</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="comment-container">
-            <img class="comment-avatar" src="./../../../assets/images/users/congphuong.jpg">
-            <div>
-              <div class="comment-content-container">
-                <p class="comment-content"><strong class="comment-username">Trần Thiện Hoà</strong>
-                  comment-available-container comment-available-container comment-available-container
-                  comment-available-container</p>
-              </div>
-              <div class="comment-extra">
-                <a role="button">Thích</a>
-                <span aria-hidden="true" role="presentation"> · </span>
-                <a role="button">Trả lời</a>
-                <span aria-hidden="true" role="presentation"> · </span>
-                <a role="button">4 ngày</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="comment-container">
-            <img class="comment-avatar" src="./../../../assets/images/users/congphuong.jpg">
-            <div>
-              <div class="comment-content-container">
-                <p class="comment-content"><strong class="comment-username">Trần Thiện Hoà</strong>
-                  comment-available-container comment-available-container comment-available-container
-                  comment-available-container</p>
-              </div>
-              <div class="comment-extra">
-                <a role="button">Thích</a>
-                <span aria-hidden="true" role="presentation"> · </span>
-                <a role="button">Trả lời</a>
-                <span aria-hidden="true" role="presentation"> · </span>
-                <a role="button">4 ngày</a>
-              </div>
-            </div>
-          </div>
-
-          
 
         </div>
 
-        <div class="comment-new-container">
-          <img class="comment-avatar" src="./../../../assets/images/users/congphuong.jpg">
+        <div *ngIf="user" class="comment-new-container">
+          <img class="comment-avatar" [src]="user.picture">
           <input class="comment-new-input" type="text" placeholder="Viết bình luận...">
         </div>
 

@@ -131,7 +131,7 @@
   .describe {
     margin: 2% 0;
     .content {
-      max-height: 100px;
+      height: 100px;
       overflow: hidden;
       overflow-y: auto;
     }
@@ -181,8 +181,8 @@
   .comment-avatar {
     border-radius: 50% !important;
     background: #ffffff;
-    width: 6%;
-    height: 6%;
+    width: 30px;
+    height: 30px;
     max-width: 50px;
     max-height: 50px;
     margin: 1%;
@@ -194,12 +194,10 @@
     display: block;
     line-height: 16px;
     margin-top: 1%;
-    ;
   }
   .comment-content {
     padding: 8px 10px;
-    margin-bottom: 1%;
-    ;
+    margin-bottom: 0;
   }
   .comment-username {
     color: #227c64
@@ -217,11 +215,13 @@
   }
   .comment-container {
     display: inline-flex;
+    margin-bottom: 1%;
   }
   .comment-available-container {
-    max-height: 50%;
+    max-height: 310px;
     overflow: hidden;
     overflow-y: auto;
+    display: grid;
   }
   .comment-new-container {
     background-color: #f5f6f7;
@@ -235,7 +235,7 @@
     border: 1px solid #dddfe2;
     font-size: 13px;
     height: 35px;
-    width: -webkit-fill-available;
+    width: stretch;
     margin: auto;
     padding-left: 2%;
     padding-right: 2%;

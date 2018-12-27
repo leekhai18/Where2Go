@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-3">
       <span class="__container-img">
-        <img [src]="post.pictures[0]">
+        <img *ngIf="post" [src]="post.pictures[0]">
       </span>
     </div>
     <div class="col-9" style="border-left: 1px solid #ebeef2; padding-left: 10px;">

@@ -15,6 +15,7 @@ export class Post {
   status: string;
   reviewNumber: string;
   rate: string;
+  userId: string;
 }
 
 @Injectable()
