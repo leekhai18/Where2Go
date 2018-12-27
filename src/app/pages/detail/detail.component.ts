@@ -22,14 +22,16 @@ export class DetailComponent implements OnInit {
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
-    this.commentsService.load().subscribe((comments) => {
+    this.commentsService.get().subscribe((comments) => {
       this.comments = comments.filter(comment => comment.postId == this.post.id);
 
-      this.userService.load().subscribe((users) => {
-        this.user = users.find(user => user.id == this.post.userId);
+      this.userService.getUser(this.post.userId).subscribe((user) => {
+        this.user = user;
+      });
 
-        this.comments.forEach(comment => {
-          comment.user = users.find(user => user.id == comment.userId);
+      this.comments.forEach(comment => {
+        this.userService.getUser(comment.userId).subscribe((user) => {
+          comment.user = user;
         });
       });
     });

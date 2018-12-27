@@ -1,7 +1,7 @@
 import { PostsService, Post } from './posts.service';
 import { Injectable } from '@angular/core';
 import { delay, map } from 'rxjs/operators';
-import { Observable } from 'rxjs/Rx'
+import { Observable } from 'rxjs/Rx';
 
 const SIZE_PAGE = 3;  
 
@@ -12,17 +12,17 @@ export class MyPostsService {
     {
       title: 'Của tôi',
       active: true,
-      idPosts: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
+      idPosts: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
       posts: []
     },
     {
       title: 'Đã thích',
-      idPosts: ['20', '21', '22', '23', '24'],
+      idPosts: [20, 21, 22, 23, 24],
       posts: []
     },
     {
       title: 'Đang xử lý',
-      idPosts: ['25', '26', '27', '28', '29'],
+      idPosts: [25, 26, 27, 28, 29],
       posts: []
     },
   ];
@@ -39,7 +39,7 @@ export class MyPostsService {
 
   // TODO: observables
   separateData() {
-    this.postsService.load().subscribe(all => {
+    this.postsService.get().subscribe(all => {
       this.posts.push(...all);
 
       for (let i = 0; i < this.data.length; i++) {

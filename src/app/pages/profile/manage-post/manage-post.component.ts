@@ -38,8 +38,8 @@ export class ManagePostComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.userService.load().subscribe((users) => {
-      this.user = users.find(user => user.id == "1");
+    this.userService.getUser(1).subscribe((user) => {
+      this.user = user;
     });
   }
 

@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 export class Post {
-  id: string;
+  id: number;
   name: string;
   address: string;
   costNeed: string;
@@ -15,15 +15,16 @@ export class Post {
   status: string;
   reviewNumber: string;
   rate: string;
-  userId: string;
+  userId: number;
 }
 
 @Injectable()
 export class PostsService {
+  private postsUrl = 'api/posts';
 
   constructor(private http: HttpClient) {}
 
-  load(): Observable<Post[]> {
-    return this.http.get<Post[]>('assets/data/posts.json');
+  get(): Observable<Post[]> {
+    return this.http.get<Post[]>(this.postsUrl);
   }
 }

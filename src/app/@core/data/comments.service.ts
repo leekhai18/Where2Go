@@ -3,18 +3,19 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 export class Comment {
-  id: string;
-  postId: string;
-  userId: string;
+  id: number;
+  postId: number;
+  userId: number;
   content: string;
 }
 
 @Injectable()
 export class CommentsService {
+  private commentsUrl = 'api/comments';
 
   constructor(private http: HttpClient) { }
 
-  load(): Observable<Comment[]> {
-    return this.http.get<Comment[]>('assets/data/comments.json');
+  get(): Observable<Comment[]> {
+    return this.http.get<Comment[]>(this.commentsUrl);
   }
 }

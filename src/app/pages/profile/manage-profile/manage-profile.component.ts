@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../../@core/data/users.service';
+import { HeaderComponent } from '../../../@theme/components';
 
 class ImageSnippet {
   constructor(public src: string, public file: File) { }
@@ -23,8 +24,8 @@ export class ManageProfileComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   ngOnInit() {
-    this.userService.load().subscribe((users) => {
-      this.user = users.find(user => user.id == "1");
+    this.userService.getUser(1).subscribe((user) => {
+      this.user = user;
     });
   }
 
@@ -32,6 +33,7 @@ export class ManageProfileComponent implements OnInit {
     if (this.enableEditName) {
       this.enableEditName = false;
       this.user.name = (<HTMLInputElement>document.getElementById('inputName')).value;
+      this.userService.update(this.user).subscribe();
     } else {
       this.enableEditName = true;
     }
@@ -41,6 +43,7 @@ export class ManageProfileComponent implements OnInit {
     if (this.enableEditEmail) {
       this.enableEditEmail = false;
       this.user.name = (<HTMLInputElement>document.getElementById('inputEmail')).value;
+      this.userService.update(this.user).subscribe();
     } else {
       this.enableEditEmail = true;
     }
@@ -50,6 +53,7 @@ export class ManageProfileComponent implements OnInit {
     if (this.enableEditPhone) {
       this.enableEditPhone = false;
       this.user.name = (<HTMLInputElement>document.getElementById('inputPhone')).value;
+      this.userService.update(this.user).subscribe();
     } else {
       this.enableEditPhone = true;
     }
@@ -62,6 +66,7 @@ export class ManageProfileComponent implements OnInit {
     reader.addEventListener('load', (event: any) => {
       this.profileImage = new ImageSnippet(event.target.result, file);
       this.user.picture = this.profileImage.src;
+      this.userService.update(this.user).subscribe();
     });
 
     reader.readAsDataURL(file);
