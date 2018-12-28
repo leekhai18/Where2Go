@@ -2039,4 +2039,8 @@ export class InMemoryDataService implements InMemoryDbService {
 
     return { users, posts, comments };
   }
+
+  genId(list): number {
+    return list.length > 0 ? Math.max(...list.map(element => element.id)) + 1 : 0;
+  }
 }

@@ -1,8 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { NbDialogRef } from '@nebular/theme';
 import { Post } from '../../@core/data/posts.service';
-import { CommentsService } from '../../@core/data/comments.service';
-import { UserService } from './../../@core/data/users.service';
+import { CommentsService, Comment } from '../../@core/data/comments.service';
+import { UserService, User } from './../../@core/data/users.service';
 
 @Component({
   selector: 'ngx-detail',
@@ -10,10 +10,11 @@ import { UserService } from './../../@core/data/users.service';
   styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent implements OnInit {
+  @ViewChild('commentcontainer') private commentcontainer: ElementRef;
 
   @Input() post: Post;
-  user: Object;
-  comments: any;
+  user: User;
+  comments: Array<Comment>;
 
   constructor(protected ref: NbDialogRef<DetailComponent>,
     private commentsService: CommentsService,
@@ -35,11 +36,34 @@ export class DetailComponent implements OnInit {
         });
       });
     });
-
-   
   }
 
   dismiss() {
     this.ref.close();
+  }
+
+  onEnter(value: string) {
+    const cmt = {
+      postId: this.post.id,
+      userId: this.user.id,
+      content: value,
+      user: this.user
+    };
+
+    this.commentsService.addComment(cmt as Comment).subscribe((response) => {
+      this.comments.push(response);
+
+      setTimeout(() => {
+        this.commentContainerScrollToBottom();
+      }, 100);
+    });
+  }
+
+  commentContainerScrollToBottom(): void {
+    try {
+      this.commentcontainer.nativeElement.scrollTop = this.commentcontainer.nativeElement.scrollHeight;
+    } catch (err) {
+      console.log(err);
+    }
   }
 }

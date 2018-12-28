@@ -57,7 +57,7 @@
           <span class="status-item col"><i class="fa fa-comment-alt"></i> {{post?.commentNumber}} bình luận</span>
         </div>
 
-        <div class="comment-available-container">
+        <div #commentcontainer class="comment-available-container">
           <div *ngFor="let comment of comments" class="comment-container">
             <img *ngIf="comment.user" class="comment-avatar" [src]="comment.user.picture">
             <div *ngIf="comment.user">
@@ -79,7 +79,8 @@
 
         <div *ngIf="user" class="comment-new-container">
           <img class="comment-avatar" [src]="user.picture">
-          <input class="comment-new-input" type="text" placeholder="Viết bình luận...">
+          <input #commentbox (keyup.enter)="onEnter(commentbox.value); commentbox.value='';"
+            class="comment-new-input" type="text" placeholder="Viết bình luận...">
         </div>
 
       </div>
