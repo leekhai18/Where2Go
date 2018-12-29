@@ -26,15 +26,15 @@ export class DetailComponent implements OnInit {
     this.commentsService.get().subscribe((comments) => {
       this.comments = comments.filter(comment => comment.postId == this.post.id);
 
-      this.userService.getUser(this.post.userId).subscribe((user) => {
-        this.user = user;
-      });
-
       this.comments.forEach(comment => {
         this.userService.getUser(comment.userId).subscribe((user) => {
           comment.user = user;
         });
       });
+    });
+
+    this.userService.getUser(this.post.userId).subscribe((user) => {
+      this.user = user;
     });
   }
 

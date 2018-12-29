@@ -3,54 +3,15 @@
 </div> -->
 
 <div class="row">
-  <div class="col-xxxl-8 col-xxl-8 col-md-8 col-lg-8">
+  <div class="col-xxxl-9 col-xxl-9 col-md-9 col-lg-9">
     <nb-card>
       <nb-card-body>
 
         <div class="posts-container">
-          <div class="post-item-container">
-            <div class="post-item-image" style="background-image: url(assets/images/posts/1_1.jpg);">
-              <span>Name</span>
-            </div>
-          </div>
-
-          <div class="post-item-container">
-            <div class="post-item-image" style="background-image: url(assets/images/posts/1_1.jpg);">
-              <span>Name</span>
-            </div>
-          </div>
-
-
-          <div class="post-item-container">
-            <div class="post-item-image" style="background-image: url(assets/images/posts/1_1.jpg);">
-              <span>Name</span>
-            </div>
-          </div>
-
-          <div class="post-item-container">
-            <div class="post-item-image" style="background-image: url(assets/images/posts/1_1.jpg);">
-              <span>Name</span>
-            </div>
-          </div>
-
-
-          <div class="post-item-container">
-            <div class="post-item-image" style="background-image: url(assets/images/posts/1_1.jpg);">
-              <span>Name</span>
-            </div>
-          </div>
-
-
-          <div class="post-item-container">
-            <div class="post-item-image" style="background-image: url(assets/images/posts/1_1.jpg);">
-              <span>Name</span>
-            </div>
-          </div>
-
-
-          <div class="post-item-container">
-            <div class="post-item-image" style="background-image: url(assets/images/posts/1_1.jpg);">
-              <span>Name</span>
+          <div *ngFor="let post of posts; let i=index" class="post-item-container">
+            <div (mouseover)="hover[i]=true; postSelected=post; authorSelected=authors[i]" (mouseleave)="hover[i]=false"
+              [ngStyle]="setStyleStatus(post.pictures[0], post.status, hover[i])" class="post-item-image">
+              <span class="post-item-name">{{post.name}}</span>
             </div>
           </div>
         </div>
@@ -59,11 +20,58 @@
     </nb-card>
   </div>
 
-  <div class="col-xxxl-4 col-xxl-4 col-md-4 col-lg-4">
+  <div class="col-xxxl-3 col-xxl-3 col-md-3 col-lg-3">
     <nb-card>
-      <nb-card-header style="font-size:1.25rem;">Nội dung: Ten dia diem</nb-card-header>
+      <nb-card-header style="font-size:1.25rem;">{{postSelected?.name}}
+        <div>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star-half-alt checked"></span>
+          <span class="far fa-star checked"></span>
+        </div>
+      </nb-card-header>
+
       <nb-card-body>
-        Hello
+        <div class="row" style="position: relative; margin-bottom: 20px">
+          <div class="col">
+            <img *ngIf="authorSelected" class="avatar" [src]="authorSelected?.picture" alt="Ảnh đại diện">
+            <a class="avatar"></a>
+          </div>
+
+          <div class="author-information col">
+            <p>
+              <strong>Người viết: </strong><span class="author-name">{{authorSelected?.name}}</span>
+            </p>
+
+            <p>
+              <strong>Ngày đăng: </strong><span class="status-item col"><i class="fa fa-calendar-alt"></i>
+                {{postSelected?.datePosted}}</span>
+            </p>
+
+          </div>
+        </div>
+
+        <div class="status row" style="border-bottom: 0">
+          <span class="status-item col"><i class=""></i> khá đông</span>
+        </div>
+        <div class="status row">
+          <span class="status-item col"><i class="fa fa-heart"></i> {{postSelected?.likeNumber}} lượt thích</span>
+          <span class="status-item col"><i class="fa fa-comment-alt"></i> {{postSelected?.commentNumber}} bình luận</span>
+        </div>
+
+        <div class="post-description-container">
+          <p><strong>Địa chỉ: </strong>{{postSelected?.address}}</p>
+          <p><strong>Chi phí cần thiết: </strong>{{postSelected?.costNeed}}</p>
+          <p><strong>Mô tả: </strong>{{describe()}}</p>
+        </div>
+
+        <div>
+          <button class="btn btn-success btn-new-post">
+            Xem chi tiết
+          </button>
+        </div>
+
       </nb-card-body>
     </nb-card>
   </div>
