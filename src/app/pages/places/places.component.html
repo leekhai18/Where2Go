@@ -1,11 +1,39 @@
-<!-- <div>
-  <button (click)="open()" class="btn btn-hero-secondary btn-demo">detail</button>
-</div> -->
-
 <div class="row">
   <div class="col-xxxl-9 col-xxl-9 col-md-9 col-lg-9">
     <nb-card>
-      <nb-card-body>
+      <nb-card-body style="overflow: hidden">
+
+        <div class="header-search-bar row">
+
+          <div class="search-container" style="width: 40%;">
+            <input type="text" class="form-control input-search" placeholder="Tìm kiếm...">
+            <i class="fa fa-search icon-search"></i>
+          </div>
+
+          <div class="filter" style="margin-left: 20px;">
+            <nb-checkbox status="success" (click)="setStatus(0)">Thưa <i class="fa fa-users" [style.color]="status[0] ? '#5be190' : '#848484'"></i></nb-checkbox>
+            <nb-checkbox status="warning" (click)="setStatus(1)">Vừa <i class="fa fa-users" [style.color]="status[1] ? '#ffc107' : '#848484'"></i></nb-checkbox>
+            <nb-checkbox status="danger" (click)="setStatus(2)">Đông <i class="fa fa-users" [style.color]="status[2] ? '#dc3545' : '#848484'"></i></nb-checkbox>
+          </div>
+
+          <div ngbDropdown>
+            <button nbButton status="success" class="btn-demo btn-success btn-outline" id="dropdownConfig"
+              ngbDropdownToggle style="border: 2px solid #d9dfe7; height: 46px;">Tìm kiếm nâng cao</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownConfig">
+              <div ngbDropdown>
+                <button nbButton status="success" class="btn-demo btn-success btn-outline" ngbDropdownToggle style="color:aliceblue">Tỉnh/Thành</button>
+              </div>
+              <div ngbDropdown>
+                <button nbButton status="success" class="btn-demo btn-success btn-outline" ngbDropdownToggle style="color:aliceblue">Quận/Huyện</button>
+              </div>
+              <div ngbDropdown>
+                <button nbButton status="success" class="btn-demo btn-success btn-outline" ngbDropdownToggle style="color:aliceblue">Chi
+                  phí cần thiết</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
 
         <div class="posts-container">
           <div *ngFor="let post of posts; let i=index" class="post-item-container" (click)="viewDetail(post)">

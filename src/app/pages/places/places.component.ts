@@ -3,11 +3,13 @@ import { PostsService, Post } from './../../@core/data/posts.service';
 import { Component, OnInit } from '@angular/core';
 import { NbDialogService } from '@nebular/theme';
 import { DetailComponent } from './../detail/detail.component';
+import {NgbDropdownConfig} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'ngx-places',
   templateUrl: './places.component.html',
-  styleUrls: ['./places.component.scss']
+  styleUrls: ['./places.component.scss'],
+  providers: [NgbDropdownConfig]
 })
 export class PlacesComponent implements OnInit {
   private posts: Array<Post>;
@@ -15,6 +17,7 @@ export class PlacesComponent implements OnInit {
   private postSelected: Post;
   private authors: Array<User> = new Array<User>();
   private authorSelected: User;
+  private status: Array<Boolean> = new Array<Boolean>(3);
 
   ngOnInit(): void {
     this.postsService.get().subscribe((posts) => {
@@ -35,7 +38,11 @@ export class PlacesComponent implements OnInit {
 
   constructor(private dialogService: NbDialogService,
     private postsService: PostsService,
-    private userService: UserService) { }
+    private userService: UserService,
+    private config: NgbDropdownConfig) { 
+      config.placement = 'bottom-right';
+      config.autoClose = false;
+    }
 
   openDetailDialog(post) {
     this.dialogService.open(DetailComponent, {
@@ -64,7 +71,7 @@ export class PlacesComponent implements OnInit {
       yellow: {
         nonhover: {
           'background-image': `url(${url})`,
-          'box-shadow': '0px 2px 6px #c9c63d',
+          'box-shadow': '0px 2px 6px #deb624',
         },
         hover: {
           'background-image': `url(${url})`,
@@ -102,12 +109,28 @@ export class PlacesComponent implements OnInit {
     return styleStatus.red.nonhover;
   }
 
+  describe() {
+    if (this.postSelected) {
+      if (this.postSelected.describe.length > 220) {
+        return this.postSelected.describe.substring(0, 220) + '...';
+      }
 
-  describe = () => {
-    if (this.postSelected.describe.length > 220) {
-      return this.postSelected.describe.substring(0, 220) + '...';
+      return this.postSelected.describe;
     }
+  }
 
-    return this.postSelected.describe;
+  private count = 0;
+  setStatus(typeIndex) {
+    this.count++;
+
+    if (this.count == 2) {
+      if (this.status[typeIndex]) {
+        this.status[typeIndex] = false;
+      } else {
+        this.status[typeIndex] = true;
+      }
+
+      this.count = 0;
+    }
   }
 }
