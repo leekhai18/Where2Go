@@ -23,7 +23,7 @@ export class PlacesComponent implements OnInit {
 
       this.hover = new Array<Boolean>(this.posts.length);
       this.hover.fill(false);
-      
+
       this.posts.forEach(post => {
         this.userService.getUser(post.userId).subscribe((user) => {
           this.authors.push(user);
@@ -37,12 +37,16 @@ export class PlacesComponent implements OnInit {
     private postsService: PostsService,
     private userService: UserService) { }
 
-  open() {
+  openDetailDialog(post) {
     this.dialogService.open(DetailComponent, {
       context: {
-        post: {}
+        post: post,
       },
     });
+  }
+
+  viewDetail(post) {
+    this.openDetailDialog(post);
   }
 
   setStyleStatus(url, status, hover) {

@@ -8,7 +8,7 @@
       <nb-card-body>
 
         <div class="posts-container">
-          <div *ngFor="let post of posts; let i=index" class="post-item-container">
+          <div *ngFor="let post of posts; let i=index" class="post-item-container" (click)="viewDetail(post)">
             <div (mouseover)="hover[i]=true; postSelected=post; authorSelected=authors[i]" (mouseleave)="hover[i]=false"
               [ngStyle]="setStyleStatus(post.pictures[0], post.status, hover[i])" class="post-item-image">
               <span class="post-item-name">{{post.name}}</span>
@@ -67,7 +67,7 @@
         </div>
 
         <div>
-          <button class="btn btn-success btn-new-post">
+          <button class="btn btn-success btn-new-post" (click)="viewDetail(postSelected)">
             Xem chi tiết
           </button>
         </div>
