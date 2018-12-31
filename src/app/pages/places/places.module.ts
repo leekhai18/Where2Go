@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 
 import { ThemeModule } from '../../@theme/theme.module';
 import { PlacesComponent } from './places.component';
+import { PostsSearchComponent } from './posts-search/posts-search.component';
 
 @NgModule({
   imports: [
@@ -9,6 +10,7 @@ import { PlacesComponent } from './places.component';
   ],
   declarations: [
     PlacesComponent,
+    PostsSearchComponent,
   ]
 })
 export class PlacesModule { }

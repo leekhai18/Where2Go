@@ -1,0 +1,22 @@
+<div class="search-container" ngbDropdown>
+  <input type="text" class="form-control input-search" placeholder="Tìm kiếm..." [class.is-invalid]="searchFailed"
+    #searchBox id="search-box" (input)="search(searchBox.value)" (keyup.enter)="onEnter()" [(ngModel)]="inputmodel"
+    ngbDropdownToggle>
+  <i class="fa fa-search icon-search"></i>
+  <i *ngIf="searching" class="fa fa-spinner icon-loading rotating"></i>
+
+  <div class="search-result" style="background-color: #40dc7e; color: aliceblue" ngbDropdownMenu>
+    <div *ngIf="!(posts$ | async)?.length && inputmodel!=''" style="margin-left: 16px;">Chưa có dữ liệu về địa điểm
+      này...</div>
+    <div *ngIf="inputmodel==''" style="margin-left: 16px;">Nhập tên địa điểm để tìm kiếm...</div>
+    <div #firstSuggestion id="firstSuggestion" *ngFor="let post of posts$ | async" class="item-suggestion" (click)="select(post.name)">
+      {{post.name}} ---
+      <span style="font-size: 12px;" class="fa fa-star checked"></span>
+      <span style="font-size: 12px;" class="fa fa-star checked"></span>
+      <span style="font-size: 12px;" class="fa fa-star checked"></span>
+      <span style="font-size: 12px;" class="fa fa-star-half-alt checked"></span>
+      <span style="font-size: 12px;" class="far fa-star checked"></span>
+    </div>
+  </div>
+  <div class="invalid-feedback" *ngIf="searchFailed">Xin lỗi, không thể tải gợi ý.</div>
+</div>

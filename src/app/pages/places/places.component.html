@@ -5,10 +5,7 @@
 
         <div class="header-search-bar row">
 
-          <div class="search-container" style="width: 40%;">
-            <input type="text" class="form-control input-search" placeholder="Tìm kiếm...">
-            <i class="fa fa-search icon-search"></i>
-          </div>
+          <ngx-posts-search (searched)="onSearched($event)" style="width: 40%;"></ngx-posts-search>
 
           <div class="filter" style="margin-left: 20px;">
             <nb-checkbox status="success" (click)="setStatus(0)">Thưa <i class="fa fa-users" [style.color]="status[0] ? '#5be190' : '#848484'"></i></nb-checkbox>
