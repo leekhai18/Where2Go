@@ -5,6 +5,11 @@ import { NbDialogService } from '@nebular/theme';
 import { DetailComponent } from './../detail/detail.component';
 import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
 
+const likedStyle = {
+  'color': 'red',
+  '-webkit-text-stroke-width': '0'
+}
+
 @Component({
   selector: 'ngx-places',
   templateUrl: './places.component.html',
@@ -162,5 +167,16 @@ export class PlacesComponent implements OnInit {
 
       return false;
     });
+  }
+
+
+  setStyleLike() {
+    if (this.liked) {
+      return likedStyle;
+    }
+  }
+  private liked = false;
+  likeClicked() {
+    this.liked = !this.liked;
   }
 }

@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import { MENU_ITEMS } from './pages-menu';
+import { MENU_ITEMS, MENU_ITEMS_NON } from './pages-menu';
+import { LocalStorage } from '../@core/data/local-storage-service';
 
 @Component({
   selector: 'ngx-pages',
@@ -11,7 +12,21 @@ import { MENU_ITEMS } from './pages-menu';
     </ngx-sample-layout>
   `,
 })
-export class PagesComponent {
+export class PagesComponent implements OnInit {
+  menu: any;
 
-  menu = MENU_ITEMS;
+  constructor(protected localStorage: LocalStorage) { }
+
+  ngOnInit(): void {
+    this.menu = MENU_ITEMS_NON;
+
+    this.localStorage.changes.subscribe((logedinStatus) => {
+      if (logedinStatus.value == true) {
+        this.menu = MENU_ITEMS;
+      } else {
+        this.menu = MENU_ITEMS_NON;
+      }
+    });
+  }
+
 }

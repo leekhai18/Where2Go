@@ -78,11 +78,15 @@
         </div>
 
         <div class="status row" style="border-bottom: 0">
-          <span class="status-item col"><i class=""></i> khá đông</span>
+          <strong style="margin-left: 10px;">Trạng thái hiện tại: </strong>
+          <span class="status-item col">
+              <i class="fa fa-users" [style.color]="postSelected?.status == '0' ? '#5be190' : (postSelected?.status == '1' ? '#ffc107' : '#dc3545')"></i>
+              {{postSelected?.status == '0' ? ' Thưa' : (postSelected?.status == '1' ? ' Vừa' : ' Đông')}}
+          </span>
         </div>
         <div class="status row">
-          <span class="status-item col"><i class="fa fa-heart"></i> {{postSelected?.likeNumber}} lượt thích</span>
-          <span class="status-item col"><i class="fa fa-comment-alt"></i> {{postSelected?.commentNumber}} bình luận</span>
+          <span class="status-item col" (click)="likeClicked()"><i class="fa fa-heart fa-custom" [ngStyle]="setStyleLike()"></i> {{postSelected?.likeNumber}} lượt thích</span>
+          <span class="status-item col" (click)="viewDetail(postSelected)"><i class="fa fa-comment-alt fa-custom"></i> {{postSelected?.commentNumber}} bình luận</span>
         </div>
 
         <div class="post-description-container">

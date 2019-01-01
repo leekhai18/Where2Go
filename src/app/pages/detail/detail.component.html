@@ -41,7 +41,6 @@
         <div class="describe row">
           <div class="col-2">
             <img *ngIf="user" class="avatar" [src]="user?.picture" alt="Ảnh đại diện">
-            <a class="avatar"></a>
             <p class="user-name">{{user?.name}}</p>
           </div>
           <div class="col-10">
@@ -52,9 +51,12 @@
 
         <div class="status row">
           <span class="status-item col"><i class="fa fa-calendar-alt"></i> {{post?.datePosted}}</span>
-          <span class="status-item col"><i class=""></i> khá đông</span>
-          <span class="status-item col"><i class="fa fa-heart"></i> {{post?.likeNumber}} lượt thích</span>
-          <span class="status-item col"><i class="fa fa-comment-alt"></i> {{post?.commentNumber}} bình luận</span>
+          <span class="status-item col">
+            <i class="fa fa-users" [style.color]="post?.status == '0' ? '#5be190' : (post?.status == '1' ? '#ffc107' : '#dc3545')"></i>
+            {{post?.status == '0' ? ' Thưa' : (post?.status == '1' ? ' Vừa' : ' Đông')}}
+          </span>
+          <span class="status-item col" (click)="likeClicked()"><i class="fa fa-heart fa-custom" [ngStyle]="setStyleLike()"></i> {{post?.likeNumber}} lượt thích</span>
+          <span class="status-item col"><i class="fa fa-comment-alt fa-custom"></i> {{post?.commentNumber}} bình luận</span>
         </div>
 
         <div #commentcontainer class="comment-available-container">
@@ -79,8 +81,8 @@
 
         <div *ngIf="user" class="comment-new-container">
           <img class="comment-avatar" [src]="user.picture">
-          <input #commentbox (keyup.enter)="onEnter(commentbox.value); commentbox.value='';"
-            class="comment-new-input" type="text" placeholder="Viết bình luận...">
+          <input #commentbox (keyup.enter)="onEnter(commentbox.value); commentbox.value='';" class="comment-new-input"
+            type="text" placeholder="Viết bình luận...">
         </div>
 
       </div>

@@ -141,7 +141,8 @@
     flex-shrink: 0;
     background: #ffffff;
     border: solid 1px #bcc3cc;
-    width: 100%;
+    width: 87px;
+    height: 87px;
     position: relative;
     display: block;
     margin: auto;
@@ -165,6 +166,11 @@
   .checked {
     color: #40dcb2;
   }
+  .fa-custom {
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #606770;
+  }
   .status {
     border-top: 1px solid #ebeef2;
     border-bottom: 1px solid #ebeef2;
@@ -176,6 +182,9 @@
     &:hover {
       background-color: aliceblue;
       cursor: pointer;
+    }
+    &:active {
+      bottom: 2px;
     }
   }
   .comment-avatar {

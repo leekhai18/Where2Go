@@ -4,6 +4,11 @@ import { Post } from '../../@core/data/posts.service';
 import { CommentsService, Comment } from '../../@core/data/comments.service';
 import { UserService, User } from './../../@core/data/users.service';
 
+const likedStyle = {
+  'color': 'red',
+  '-webkit-text-stroke-width': '0'
+}
+
 @Component({
   selector: 'ngx-detail',
   templateUrl: './detail.component.html',
@@ -65,5 +70,15 @@ export class DetailComponent implements OnInit {
     } catch (err) {
       console.log(err);
     }
+  }
+
+  setStyleLike() {
+    if (this.liked) {
+      return likedStyle;
+    }
+  }
+  private liked = false;
+  likeClicked() {
+    this.liked = !this.liked;
   }
 }

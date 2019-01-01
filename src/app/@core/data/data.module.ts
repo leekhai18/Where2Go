@@ -7,6 +7,7 @@ import { PostsService } from './posts.service';
 import { StateService } from './state.service';
 import { LayoutService } from './layout.service';
 import { CommentsService } from './comments.service';
+import { LocalStorage } from './local-storage-service';
 
 const SERVICES = [
   UserService,
@@ -14,7 +15,8 @@ const SERVICES = [
   PostsService,
   StateService,
   LayoutService,
-  CommentsService
+  CommentsService,
+  LocalStorage
 ];
 
 @NgModule({

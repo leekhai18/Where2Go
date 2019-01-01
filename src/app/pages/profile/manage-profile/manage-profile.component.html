@@ -1,14 +1,14 @@
 <nb-card style="height: 760px;">
   <nb-card-header style="font-size:1.25rem;">Thông tin cá nhân</nb-card-header>
   <nb-card-body>
-    <div>
+    <div style="border-bottom: 1px solid #ebeef2">
       <img *ngIf="user" class="avatar" [src]="user?.picture" alt="Ảnh đại diện">
       <input  accept="image/*, image/heic, image/heif" 
               multiple="" name="composer_photo" title="Chọn ảnh để tải lên"
               display="inline-block" type="file" class="input-avatar"
               #imageInput
               (change)="processFile(imageInput)">
-      <a class="avatar"></a>
+      <br>
     </div>
 
     <div style="margin-top: 3rem;">
@@ -38,12 +38,10 @@
     </div>
 
     <div style="margin-top: 3rem;">
-      <a [routerLink]="[ '/pages/write-post' ]">
-        <button class="btn btn-success btn-new-post">
+        <button [routerLink]="[ '/pages/write-post' ]" class="btn btn-success btn-new-post">
           <i style="font-weight: 600; font-size: 15px;" class="menu-icon nb-compose ng-star-inserted"></i>
           Viết bài
         </button>
-      </a>
     </div>
   </nb-card-body>
 </nb-card>

@@ -17,7 +17,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/pages/write-post',
   },
   {
-    title: 'Tài khoản',
+    title: 'Cá nhân',
     group: true,
   },
   {
@@ -25,9 +25,22 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'nb-person',
     link: '/pages/profile',
   },
+];
+
+export const MENU_ITEMS_NON: NbMenuItem[] = [
   {
-    title: 'Đăng xuất',
-    icon: 'nb-power',
-    link: '',
+    title: 'Chức năng',
+    group: true,
   },
+  {
+    title: 'Địa điểm',
+    icon: 'nb-keypad',
+    link: '/pages/places',
+    home: true,
+  },
+  {
+    title: 'Viết bài',
+    icon: 'nb-compose',
+    link: '/pages/write-post',
+  }
 ];

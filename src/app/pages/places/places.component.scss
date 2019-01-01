@@ -74,10 +74,16 @@ nb-card {
   padding-top: 10px;
 }
 
+.fa-custom {
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #606770;
+}
+
 .status {
   border-top: 1px solid #ebeef2;
   border-bottom: 1px solid #ebeef2;
-  text-align: center;
+  text-align: left;
   padding: 1%;
 }
 
@@ -87,6 +93,13 @@ nb-card {
     background-color: aliceblue;
     cursor: pointer;
   }
+  &:active {
+    bottom: 2px;
+  }
+}
+
+.checked {
+  color: #40dcb2;
 }
 
 .btn-new-post {
