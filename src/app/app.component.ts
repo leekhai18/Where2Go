@@ -15,12 +15,13 @@ export class AppComponent implements OnInit {
 
   constructor(private analytics: AnalyticsService, public auth: AuthService) {
     auth.handleAuthentication();
+    auth.scheduleRenewal();
   }
 
   ngOnInit(): void {
     this.analytics.trackPageViews();
 
-    if (localStorage.getItem('isLoggedIn') === 'true') {
+    if (localStorage.getItem('LOGEDIN') === 'true') {
       this.auth.renewTokens();
     }
   }

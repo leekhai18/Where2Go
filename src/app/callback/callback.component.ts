@@ -13,7 +13,6 @@ export class CallbackComponent implements OnInit {
 
   ngOnInit() {
     this.localStorage.setItem('LOGEDIN', true);
-
     this.router.navigate(['/pages/places']);
   }
 

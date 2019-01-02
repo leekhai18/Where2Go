@@ -5,7 +5,6 @@ import { UserService } from '../../../@core/data/users.service';
 import { AnalyticsService } from '../../../@core/utils/analytics.service';
 import { LayoutService } from '../../../@core/data/layout.service';
 import { Router } from '@angular/router';
-import { LocalStorage } from './../../../@core/data/local-storage-service';
 import { AuthService } from '../../../auth/auth.service';
 
 @Component({
@@ -29,30 +28,20 @@ export class HeaderComponent implements OnInit {
     private analyticsService: AnalyticsService,
     private layoutService: LayoutService,
     private router: Router,
-    protected localStorage: LocalStorage,
     public auth: AuthService) {
   }
 
   ngOnInit() {
-    // this.userService.getUser(1).subscribe((user) => {
-    //   this.user = user;
-    // });
-
     this.userService.userActive.subscribe(user => this.user = user);
 
     this.menuService.onItemClick().subscribe((item) => {
       if (item.item == this.userMenu[0]) {
         this.router.navigate(['/pages/profile']);
       } else if (item.item == this.userMenu[1]) {
-        this.router.navigate(['/pages/places']);
-        this.localStorage.setItem('LOGEDIN', false);
         this.auth.logout();
+        window.location.href = 'https://leekhai18.auth0.com/v2/logout';
       }
     });
-
-    if (localStorage.getItem('isLoggedIn') === 'true') {
-      this.auth.renewTokens();
-    }
   }
 
   toggleSidebar(): boolean {
