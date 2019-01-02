@@ -40,8 +40,8 @@
 
         <div class="describe row">
           <div class="col-2">
-            <img *ngIf="user" class="avatar" [src]="user?.picture" alt="Ảnh đại diện">
-            <p class="user-name">{{user?.name}}</p>
+            <img *ngIf="author" class="avatar" [src]="author?.picture" alt="Ảnh đại diện">
+            <p class="user-name">{{author?.name}}</p>
           </div>
           <div class="col-10">
             <p><strong>Chi phí cần thiết: </strong>{{post?.costNeed}}</p>
@@ -79,8 +79,8 @@
 
         </div>
 
-        <div *ngIf="user" class="comment-new-container">
-          <img class="comment-avatar" [src]="user.picture">
+        <div *ngIf="userActive" class="comment-new-container">
+          <img class="comment-avatar" [src]="userActive.picture">
           <input #commentbox (keyup.enter)="onEnter(commentbox.value); commentbox.value='';" class="comment-new-input"
             type="text" placeholder="Viết bình luận...">
         </div>

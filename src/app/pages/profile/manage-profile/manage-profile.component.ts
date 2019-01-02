@@ -24,9 +24,6 @@ export class ManageProfileComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   ngOnInit() {
-    // this.userService.getUser(1).subscribe((user) => {
-    //   this.user = user;
-    // });
     this.userService.userActive.subscribe(user => this.user = user);
   }
 

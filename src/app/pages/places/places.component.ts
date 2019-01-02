@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { NbDialogService } from '@nebular/theme';
 import { DetailComponent } from './../detail/detail.component';
 import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
+import { AuthService } from '../../auth/auth.service';
 
 const likedStyle = {
   'color': 'red',
@@ -49,7 +50,8 @@ export class PlacesComponent implements OnInit {
   constructor(private dialogService: NbDialogService,
     private postsService: PostsService,
     private userService: UserService,
-    private config: NgbDropdownConfig) {
+    private config: NgbDropdownConfig,
+    public auth: AuthService) {
     config.placement = 'bottom-right';
     config.autoClose = false;
   }
@@ -63,7 +65,11 @@ export class PlacesComponent implements OnInit {
   }
 
   viewDetail(post) {
-    this.openDetailDialog(post);
+    if (this.auth.isAuthenticated()) {
+      this.openDetailDialog(post);
+    } else {
+      alert('Bạn cần đăng nhập để xem chi tiết và bình luận');
+    }
   }
 
   setStyleStatus(url, status, hover) {
@@ -177,6 +183,10 @@ export class PlacesComponent implements OnInit {
   }
   private liked = false;
   likeClicked() {
-    this.liked = !this.liked;
+    if (this.auth.isAuthenticated()) {
+      this.liked = !this.liked;
+    } else {
+      alert('Bạn cần đăng nhập để thả thính tùm lum');
+    }
   }
 }

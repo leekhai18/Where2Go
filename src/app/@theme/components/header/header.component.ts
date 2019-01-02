@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
 
   user: any;
 
-  userMenu = [{ title: 'Profile' }, { title: 'Log out' }];
+  userMenu = [{ title: 'Trang cá nhân' }, { title: 'Đăng xuất' }];
 
   constructor(private sidebarService: NbSidebarService,
     private menuService: NbMenuService,

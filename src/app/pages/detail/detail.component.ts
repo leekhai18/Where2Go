@@ -18,7 +18,8 @@ export class DetailComponent implements OnInit {
   @ViewChild('commentcontainer') private commentcontainer: ElementRef;
 
   @Input() post: Post;
-  user: User;
+  author: User;
+  userActive: User;
   comments: Array<Comment>;
 
   constructor(protected ref: NbDialogRef<DetailComponent>,
@@ -38,9 +39,8 @@ export class DetailComponent implements OnInit {
       });
     });
 
-    this.userService.getUser(this.post.userId).subscribe((user) => {
-      this.user = user;
-    });
+    this.userService.getUser(this.post.userId).subscribe(author => this.author = author);
+    this.userService.userActive.subscribe(user => this.userActive = user);
   }
 
   dismiss() {
@@ -50,9 +50,9 @@ export class DetailComponent implements OnInit {
   onEnter(value: string) {
     const cmt = {
       postId: this.post.id,
-      userId: this.user.id,
+      userId: this.userActive.id,
       content: value,
-      user: this.user
+      user: this.userActive
     };
 
     this.commentsService.addComment(cmt as Comment).subscribe((response) => {

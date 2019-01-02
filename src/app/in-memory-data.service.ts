@@ -5,8 +5,8 @@ export class InMemoryDataService implements InMemoryDbService {
     const users = [
       {
         id: 1,
-        name: 'Lê Khải',
-        picture: 'assets/images/users/leekhai.png',
+        name: 'leekhai18',
+        picture: 'assets/images/users/leekhai.jpeg',
         email: 'leekhai18@gmail.com',
         phone: '0328372204'
       },
