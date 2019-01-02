@@ -6,6 +6,7 @@ import { AnalyticsService } from '../../../@core/utils/analytics.service';
 import { LayoutService } from '../../../@core/data/layout.service';
 import { Router } from '@angular/router';
 import { LocalStorage } from './../../../@core/data/local-storage-service';
+import { AuthService } from '../../../auth/auth.service';
 
 @Component({
   selector: 'ngx-header',
@@ -22,22 +23,20 @@ export class HeaderComponent implements OnInit {
 
   userMenu = [{ title: 'Profile' }, { title: 'Log out' }];
 
-  logedinStatus: any;
-
   constructor(private sidebarService: NbSidebarService,
     private menuService: NbMenuService,
     private userService: UserService,
     private analyticsService: AnalyticsService,
     private layoutService: LayoutService,
     private router: Router,
-    protected localStorage: LocalStorage) {
+    protected localStorage: LocalStorage,
+    public auth: AuthService) {
   }
 
   ngOnInit() {
     // this.userService.getUser(1).subscribe((user) => {
     //   this.user = user;
     // });
-    this.logedinStatus = localStorage.getItem('LOGEDIN') == 'true' ? true : false;
 
     this.userService.userActive.subscribe(user => this.user = user);
 
@@ -47,9 +46,13 @@ export class HeaderComponent implements OnInit {
       } else if (item.item == this.userMenu[1]) {
         this.router.navigate(['/pages/places']);
         this.localStorage.setItem('LOGEDIN', false);
-        this.logedinStatus = false;
+        this.auth.logout();
       }
     });
+
+    if (localStorage.getItem('isLoggedIn') === 'true') {
+      this.auth.renewTokens();
+    }
   }
 
   toggleSidebar(): boolean {
@@ -65,10 +68,5 @@ export class HeaderComponent implements OnInit {
 
   startSearch() {
     this.analyticsService.trackEvent('startSearch');
-  }
-
-  login() {
-    this.localStorage.setItem('LOGEDIN', true);
-    this.logedinStatus = true;
   }
 }

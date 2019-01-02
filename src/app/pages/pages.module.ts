@@ -8,6 +8,7 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { ThemeModule } from '../@theme/theme.module';
 import { DetailComponent } from './detail/detail.component';
 import { NbDialogModule } from '@nebular/theme';
+import { CallbackComponent } from './../callback/callback.component';
 
 const PAGES_COMPONENTS = [
   PagesComponent,
@@ -25,6 +26,7 @@ const PAGES_COMPONENTS = [
   declarations: [
     ...PAGES_COMPONENTS,
     DetailComponent,
+    CallbackComponent
   ],
   entryComponents: [
     DetailComponent

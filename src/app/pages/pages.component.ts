@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { MENU_ITEMS, MENU_ITEMS_NON } from './pages-menu';
 import { LocalStorage } from '../@core/data/local-storage-service';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'ngx-pages',
@@ -15,10 +16,11 @@ import { LocalStorage } from '../@core/data/local-storage-service';
 export class PagesComponent implements OnInit {
   menu: any;
 
-  constructor(protected localStorage: LocalStorage) { }
+  constructor(protected localStorage: LocalStorage,
+    public auth: AuthService) { }
 
   ngOnInit(): void {
-    this.menu = MENU_ITEMS_NON;
+    localStorage.getItem('LOGEDIN') == 'true' ? this.menu = MENU_ITEMS : this.menu = MENU_ITEMS_NON;
 
     this.localStorage.changes.subscribe((logedinStatus) => {
       if (logedinStatus.value == true) {

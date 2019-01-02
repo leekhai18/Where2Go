@@ -5,7 +5,7 @@ import { PagesComponent } from './pages.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PlacesComponent } from './places/places.component';
 import { WritePostComponent } from './write-post/write-post.component';
-
+import { CallbackComponent } from './../callback/callback.component';
 
 const routes: Routes = [{
   path: '',
@@ -24,7 +24,9 @@ const routes: Routes = [{
     redirectTo: 'places',
     pathMatch: 'full',
   }],
-}];
+},
+{ path: 'callback', component: CallbackComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

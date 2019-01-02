@@ -18,6 +18,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 
+import { AuthService } from './auth/auth.service';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -37,6 +39,7 @@ import { InMemoryDataService } from './in-memory-data.service';
   ],
   bootstrap: [AppComponent],
   providers: [
+    AuthService,
     { provide: APP_BASE_HREF, useValue: '/' },
   ],
 })
