@@ -75,6 +75,8 @@ export class AuthService {
     // Remove isLoggedIn flag from localStorage
     this.localStorage.setItem('LOGEDIN', false);
     this.unscheduleRenewal();
+    // Logout api v2
+    window.location.href = 'https://leekhai18.auth0.com/v2/logout?returnTo=http%3A%2F%2Flocalhost:4200&client_id=OzeS5tGhk12GVARvnTg56sIaTZny5Yru';
     // Go back to the home route
     this.router.navigate(['/pages/places']);
   }

@@ -39,7 +39,6 @@ export class HeaderComponent implements OnInit {
         this.router.navigate(['/pages/profile']);
       } else if (item.item == this.userMenu[1]) {
         this.auth.logout();
-        window.location.href = 'https://leekhai18.auth0.com/v2/logout';
       }
     });
   }
